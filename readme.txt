@@ -28,7 +28,10 @@ TRANSLATED IN FOLLOWING LANGUAGES:
 
 == Screenshots ==
 
-1. Plugin's admin screen
+1. Options page admin panel-1
+2. Options page admin panel-2
+3. Options page admin panel-3
+4. Options page admin panel-4
 
 == Changelog ==
 
