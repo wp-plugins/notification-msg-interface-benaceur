@@ -137,7 +137,7 @@ add_filter('the_content','add_text_content_benaceur_style2_ap'); }
 	padding-left:6px;
 	line-height:<?php if (!empty($options_f['mib_msg_line_height'])) echo $options_f['mib_msg_line_height'] ; else  echo '1.5'; ?>;
 	<?php if ( !$options_f['mib_msg_min_width'] ) { ?>
-    width:<?php if (!empty($options_f['mib_msg_width'])) echo $options_f['mib_msg_width'] ; else  echo '600px'; ?>;
+    width:<?php if (!empty($options_f['mib_msg_width'])) echo $options_f['mib_msg_width'] ; else  echo '60%'; ?>;
 	<?php } ?>
 	min-width:<?php echo $options_f['mib_msg_min_width'] ;?>px;
 	height:<?php if (!empty($options_f['mib_msg_height'])) echo $options_f['mib_msg_height'] ; else  echo 'auto'; ?>px;

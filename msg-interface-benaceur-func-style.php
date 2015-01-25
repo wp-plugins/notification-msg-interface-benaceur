@@ -19,7 +19,7 @@ function msg_interface_benaceur_m_defaults(){
 	    'mib_msg_background2'    => '#FFFFFF',
 		'mib_msg_txt_color'    => '#000000',
 		'mib_msg_line_height'    => '1.5',
-		'mib_msg_width'    => '600px',
+		'mib_msg_width'    => '60%',
 		'mib_msg_min_width'    => '',
 		'mib_msg_margin_top'    => '10',
 		'mib_msg_margin_bottom'    => '10',

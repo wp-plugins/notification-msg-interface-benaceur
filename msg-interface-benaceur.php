@@ -339,7 +339,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_width']) echo $options_f['mib_msg_width']; else echo "600px"; ?>" name="msg_interface_benaceur_m_options[mib_msg_width]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_width']) echo $options_f['mib_msg_width']; else echo "60%"; ?>" name="msg_interface_benaceur_m_options[mib_msg_width]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("Width by adding: px أو %",'msg-interface-benaceur'); ?> </td></div></br>
