@@ -23,7 +23,7 @@ TRANSLATED IN FOLLOWING LANGUAGES:
 
 1. Upload Notification msg interface benaceur to the "/wp-content/plugins/"
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Place "<?php if (has_action('wp_after_header_benaceur')) wp_after_header_benaceur_(); ?>" in your templates.
+3. Lisez la note en haut de la page des options dans le panneau de control.
 4. Adjust your settings in Admin Panel.
 
 == Screenshots ==
