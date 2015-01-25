@@ -3,7 +3,7 @@ Contributors: Benaceur
 Tags: Notification, message
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 
 A message appears below the header or the designated location.  
@@ -35,8 +35,11 @@ TRANSLATED IN FOLLOWING LANGUAGES:
 
 == Changelog ==
 
-= 1.0 =
-* Is the loneliest number. The very first version of Notification msg interface benaceur.
+= 1.1.1 =
+* Minor error correction in style2 with some changes in the values of the default style.
 
 = 1.1.0 =
 * Tested with WordPress 4.1.
+
+= 1.0 =
+* Is the loneliest number. The very first version of Notification msg interface benaceur.

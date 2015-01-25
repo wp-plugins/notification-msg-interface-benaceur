@@ -1,9 +1,9 @@
 <?php
 /** 
 Plugin Name: Notification msg interface benaceur
-Plugin URI: http://benaceur-php.com/
+Plugin URI: https://wordpress.org/plugins/notification-msg-interface-benaceur/
 Description: A message appears below the header or the designated location
-Version: 1.1.0
+Version: 1.1.1
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -196,7 +196,9 @@ class Site_msg_interface_benaceur {
  ?> 
 <div class='wrap'> <h2><?php _e('Add a message', 'msg-interface-benaceur'); ?></h2> <form method="post" action="<?php echo esc_attr( $action ); ?>">
 <p><?php _e('Note: After activating the plugin Put the following line in the place where you want the message to appear:', 'msg-interface-benaceur'); ?></p>
-<p><code>&lt;?php if (has_action('wp_after_header_benaceur')) wp_after_header_benaceur_(); ?></code></p></br><hr>
+<p><code>&lt;?php if (has_action('wp_after_header_benaceur')) wp_after_header_benaceur_(); ?></code></p>
+<p><?php _e('but for text at the top or bottom of the article do not add any code to your theme', 'msg-interface-benaceur'); ?></p>
+</br><hr>
  <?php
 	settings_fields( 'msg-interface-benaceur-settings-group' );
 	do_settings_sections( 'msg-interface-benaceur-settings-group' );
@@ -277,7 +279,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" id="msg_interface_benaceur_colorScheme1" class="msg_interface_benaceur_color_inp" style="text-align:center;" value="<?php if($options_f['mib_msg_background']) echo $options_f['mib_msg_background']; else echo "#9933FF"; ?>" name="msg_interface_benaceur_m_options[mib_msg_background]" />
+								<input type="text" id="msg_interface_benaceur_colorScheme1" class="msg_interface_benaceur_color_inp" style="text-align:center;" value="<?php if($options_f['mib_msg_background']) echo $options_f['mib_msg_background']; else echo "#F3F3F3"; ?>" name="msg_interface_benaceur_m_options[mib_msg_background]" />
 								<div class="msg_interface_benaceur_colsel msg_interface_benaceur_colorScheme1"></div>
 							</div></div>
 						</td>
@@ -286,7 +288,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" id="msg_interface_benaceur_colorScheme2" class="msg_interface_benaceur_color_inp" style="text-align:center;" value="<?php if($options_f['mib_msg_background2']) echo $options_f['mib_msg_background2']; else echo "#AD5BFF"; ?>" name="msg_interface_benaceur_m_options[mib_msg_background2]" />
+								<input type="text" id="msg_interface_benaceur_colorScheme2" class="msg_interface_benaceur_color_inp" style="text-align:center;" value="<?php if($options_f['mib_msg_background2']) echo $options_f['mib_msg_background2']; else echo "#FFFFFF"; ?>" name="msg_interface_benaceur_m_options[mib_msg_background2]" />
 								<div class="msg_interface_benaceur_colsel msg_interface_benaceur_colorScheme2"></div>
 							</div></div>
 						</td>
@@ -295,7 +297,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" id="msg_interface_benaceur_txtclr" class="msg_interface_benaceur_color_inp" style="text-align:center;" value="<?php if($options_f['mib_msg_txt_color']) echo $options_f['mib_msg_txt_color']; else echo "#FFFFFF"; ?>" name="msg_interface_benaceur_m_options[mib_msg_txt_color]" />
+								<input type="text" id="msg_interface_benaceur_txtclr" class="msg_interface_benaceur_color_inp" style="text-align:center;" value="<?php if($options_f['mib_msg_txt_color']) echo $options_f['mib_msg_txt_color']; else echo "#000000"; ?>" name="msg_interface_benaceur_m_options[mib_msg_txt_color]" />
 								<div class="msg_interface_benaceur_colsel msg_interface_benaceur_txtclr"></div>
 							</div></div>
 						</td>
@@ -312,7 +314,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_border_px']) echo $options_f['mib_msg_border_px']; else echo ""; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_px]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_border_px']) echo $options_f['mib_msg_border_px']; else echo "1"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_px]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("border px",'msg-interface-benaceur'); ?> </td></div></br>
@@ -320,7 +322,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" id="msg_interface_benaceur_colorBorder" class="msg_interface_benaceur_color_inp" style="text-align:center;" value="<?php if($options_f['mib_msg_border_color']) echo $options_f['mib_msg_border_color']; else echo " #FFFFFF"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_color]" />
+								<input type="text" id="msg_interface_benaceur_colorBorder" class="msg_interface_benaceur_color_inp" style="text-align:center;" value="<?php if($options_f['mib_msg_border_color']) echo $options_f['mib_msg_border_color']; else echo "#c6c6c6"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_color]" />
 								<div class="msg_interface_benaceur_colsel msg_interface_benaceur_colorBorder"></div>
 							</div></div>
 						</td>
@@ -329,10 +331,10 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_border_radius']) echo $options_f['mib_msg_border_radius']; else echo "8"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_radius]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_border_radius']) echo $options_f['mib_msg_border_radius']; else echo ""; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_radius]" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("border radius/Enter to disable it: 00",'msg-interface-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("border radius",'msg-interface-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>

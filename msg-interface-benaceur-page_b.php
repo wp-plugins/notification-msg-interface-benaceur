@@ -8,7 +8,6 @@ $ben_style2 = '
 <div id="mib_msg_interface-note-msgmea" class="msg_quick_ben">'. get_option('msg_interface_benaceur_text') .'</div>
 </div>
 </div>
-</div>
 </div>';
 
 if ( get_option('msg_interface_benaceur_align_msg') == 'center' ) {
@@ -126,10 +125,10 @@ add_filter('the_content','add_text_content_benaceur_style2_ap'); }
 	margin-bottom:8px;
 }
 .msg_quick_ben { 
-    background-color:<?php if (!empty($options_f['mib_msg_background'])) echo $options_f['mib_msg_background'] ; else  echo '#9933FF'; ?>;
+    background-color:<?php if (!empty($options_f['mib_msg_background'])) echo $options_f['mib_msg_background'] ; else  echo '#F3F3F3'; ?>;
 	font-family:<?php if (!empty($options_f['mib_msg_font_family'])) echo $options_f['mib_msg_font_family'] ; else  echo 'Arial'; ?>;
 	font-size:<?php if (!empty($options_f['mib_msg_font_size'])) echo $options_f['mib_msg_font_size'] ; else  echo '20'; ?>px;
-	color:<?php if (!empty($options_f['mib_msg_txt_color'])) echo $options_f['mib_msg_txt_color'] ; else  echo '#fff'; ?>; 
+	color:<?php if (!empty($options_f['mib_msg_txt_color'])) echo $options_f['mib_msg_txt_color'] ; else  echo '#000000'; ?>; 
 	text-align:<?php echo $options_f['mib_msg_text_align'] ;?>;
 	font-weight:<?php echo $options_f['mib_msg_font_weight'] ;?>;
 	padding-top:<?php if (!empty($options_f['mib_msg_padding_top'])) echo $options_f['mib_msg_padding_top'] ; else  echo '8'; ?>px;
@@ -142,10 +141,10 @@ add_filter('the_content','add_text_content_benaceur_style2_ap'); }
 	<?php } ?>
 	min-width:<?php echo $options_f['mib_msg_min_width'] ;?>px;
 	height:<?php if (!empty($options_f['mib_msg_height'])) echo $options_f['mib_msg_height'] ; else  echo 'auto'; ?>px;
-	border:<?php if (!empty($options_f['mib_msg_border_px'])) echo $options_f['mib_msg_border_px'] ; else  echo ''; ?>px solid <?php if (!empty($options_f['mib_msg_border_color'])) echo $options_f['mib_msg_border_color'] ; else  echo ''; ?>;
-	border-radius:<?php if (!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius'] ; else  echo '8'; ?>px;
-	-moz-border-radius:<?php if (!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius'] ; else  echo '8'; ?>px;
-	-webkit-border-radius:<?php if (!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius'] ; else  echo '8'; ?>px;
+	border:<?php if (!empty($options_f['mib_msg_border_px'])) echo $options_f['mib_msg_border_px'] ; else  echo '1'; ?>px solid <?php if (!empty($options_f['mib_msg_border_color'])) echo $options_f['mib_msg_border_color'] ; else  echo '#c6c6c6'; ?>;
+	border-radius:<?php if (!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius'] ; else  echo ''; ?>px;
+	-moz-border-radius:<?php if (!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius'] ; else  echo ''; ?>px;
+	-webkit-border-radius:<?php if (!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius'] ; else  echo ''; ?>px;
 	opacity:<?php if (!empty($options_f['mib_msg_opacity'])) echo $options_f['mib_msg_opacity'] ; else  echo '1'; ?>;
 	text-shadow:<?php echo $options_f['mib_msg_text_shadow']; ?> <?php if (!empty($options_f['mib_msg_text_shadow_color'])) echo $options_f['mib_msg_text_shadow_color'] ; else  echo '#000000'; ?>;
 }

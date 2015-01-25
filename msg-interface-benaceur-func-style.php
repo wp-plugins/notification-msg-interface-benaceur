@@ -15,9 +15,9 @@ function msg_interface_benaceur_scripts() {
 
 function msg_interface_benaceur_m_defaults(){
 	$default = array(
-	    'mib_msg_background'    => '#9933FF',
-	    'mib_msg_background2'    => '#AD5BFF',
-		'mib_msg_txt_color'    => '#FFFFFF',
+	    'mib_msg_background'    => '#F3F3F3',
+	    'mib_msg_background2'    => '#FFFFFF',
+		'mib_msg_txt_color'    => '#000000',
 		'mib_msg_line_height'    => '1.5',
 		'mib_msg_width'    => '600px',
 		'mib_msg_min_width'    => '',
@@ -25,9 +25,9 @@ function msg_interface_benaceur_m_defaults(){
 		'mib_msg_margin_bottom'    => '10',
 		'mib_msg_padding_top'    => '8',
 		'mib_msg_padding_bottom'    => '8',
-		'mib_msg_border_px'    => '',
-		'mib_msg_border_color'    => '#FFFFFF',
-		'mib_msg_border_radius'    => '8',
+		'mib_msg_border_px'    => '1',
+		'mib_msg_border_color'    => '#c6c6c6',
+		'mib_msg_border_radius'    => '',
 		'mib_msg_font_family'    => 'Arial',
 		'mib_msg_font_size'    => '20',
 		'mib_msg_font_weight'    => 'normal',
