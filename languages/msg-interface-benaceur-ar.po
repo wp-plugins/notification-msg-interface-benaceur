@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Notification msg interface benaceur v1.2\n"
+"Project-Id-Version: Notification msg interface benaceur v1.2.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-01-27 00:15:05+0000\n"
+"PO-Revision-Date: 2015-01-27 22:50:57+0000\n"
 "Last-Translator: BENACEUR <mohamedcompte@hotmail.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -322,11 +322,6 @@ msgstr ""
 msgid "Click to reset style properties plugin"
 msgstr "انقر لإعادة تعيين خصائص الستايل الإفتراضية."
 
-#: msg-interface-benaceur.php:532
-#@ msg-interface-benaceur
-msgid "Note: After Reset options Click on \"Save Changes\"."
-msgstr "بعد إعادة تعيين خصائص الستايل الإفتراضية اضغط على حفظ التغييرات."
-
 #: msg-interface-benaceur.php:284
 #@ msg-interface-benaceur
 msgid "Click to reset properties plugin"
@@ -336,4 +331,14 @@ msgstr "انقر لإعادة تعيين خصائص الإضافة الإفتر�
 #@ msg-interface-benaceur
 msgid "Settings"
 msgstr "الإعدادات"
+
+#: msg-interface-benaceur.php:532
+#@ msg-interface-benaceur
+msgid "Note: After Reset options click \"Save Changes\"."
+msgstr "ملاحظة: بعد إعادة تعيين خصائص الستايل الإفتراضية اضغط على حفظ التغييرات.\n"
+
+#: msg-interface-benaceur.php:533
+#@ msg-interface-benaceur
+msgid "As well if the first use of the plugin click \"Save Changes\"."
+msgstr "كذلك عند أول استعمال للإضافة اضغط على حفظ التغييرات الخاصة بالستايل."
 

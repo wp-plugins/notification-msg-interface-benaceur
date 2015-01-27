@@ -3,7 +3,7 @@
 Plugin Name: Notification msg interface benaceur
 Plugin URI: https://wordpress.org/plugins/notification-msg-interface-benaceur/
 Description: A message appears below the header or the designated location
-Version: 1.2
+Version: 1.2.1
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -529,7 +529,8 @@ $options_f = get_option('msg_interface_benaceur_m_options');
       <input type="submit" value="<?php _e('Click to reset style properties plugin', 'msg-interface-benaceur');?>" class="button-secondary" />
 	  <input type="hidden" name="msg_interface_benaceur_m_update" value="true" />
     </form>
-<p><?php _e('Note: After Reset options Click on "Save Changes".', 'msg-interface-benaceur'); ?></p>
+<p><?php _e('Note: After Reset options click "Save Changes".', 'msg-interface-benaceur'); ?></p>
+<p><?php _e('As well if the first use of the plugin click "Save Changes".', 'msg-interface-benaceur'); ?></p>
 </div>
 
 <?php }
