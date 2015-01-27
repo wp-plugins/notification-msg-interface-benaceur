@@ -3,11 +3,21 @@
 Plugin Name: Notification msg interface benaceur
 Plugin URI: https://wordpress.org/plugins/notification-msg-interface-benaceur/
 Description: A message appears below the header or the designated location
-Version: 1.1.1
+Version: 1.2
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
 */
+
+define("NOTIFICATION_MSG_INTERFACE_BENACEUR", "N-message-Ben");
+
+// Add settings link on plugin page
+function msg_interface_benaceur_action_links($links){
+	$links[] = '<a href="'.get_admin_url(null, '?page='.NOTIFICATION_MSG_INTERFACE_BENACEUR.'').'">'.__("Settings", 'msg-interface-benaceur').'</a>';
+	return $links;
+}
+add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'msg_interface_benaceur_action_links');
+// Add settings link on plugin page
 
 load_plugin_textdomain( 'msg-interface-benaceur', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 		
@@ -265,8 +275,15 @@ class Site_msg_interface_benaceur {
 </table>
 </br></br>
 <p><?php submit_button(); ?></p>
-</form></div>
-
+</form>
+    <form action="<?php echo esc_attr( $action ); ?>" method="post">
+ <?php
+	settings_fields( 'msg-interface-benaceur-settings-group' );
+	do_settings_sections( 'msg-interface-benaceur-settings-group' );
+?>
+      <input type="submit" value="<?php _e('Click to reset properties plugin', 'msg-interface-benaceur');?>" class="button-secondary" />
+    </form></br>
+</div>
 </br><center><div id="msg_interface_benaceur-trait-horizontal"></div></center>
 	<div id="msg_interface_benaceur_font">
   <form method="post" action=""  name="options-form1">
@@ -508,6 +525,11 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 <p class="submit"><input type="submit" id="msg_interface_benaceur_m_update" name="msg_interface_benaceur_m_update" class="button button-primary" value="<?php _e('Save Changes', 'msg-interface-benaceur');?>"  /></p>
 				</div>
 			</form>
+    <form action="" method="post">
+      <input type="submit" value="<?php _e('Click to reset style properties plugin', 'msg-interface-benaceur');?>" class="button-secondary" />
+	  <input type="hidden" name="msg_interface_benaceur_m_update" value="true" />
+    </form>
+<p><?php _e('Note: After Reset options Click on "Save Changes".', 'msg-interface-benaceur'); ?></p>
 </div>
 
 <?php }
