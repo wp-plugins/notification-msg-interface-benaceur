@@ -117,7 +117,7 @@ elseif ( get_option('msg_interface_benaceur_align_msg_content_bottom') == 'left'
 return $content;	
 }
 
-if ( $options_f['mib_msg_interface_style_clignotement'] == 'style1' )  {
+if ( $options_f['mib_msg_interface_style_clignotement'] == 'style1' || empty($options_f['mib_msg_interface_style_clignotement']) )  {
 if ( !get_option( 'msg_interface_benaceur_disable_msg_head') )   {
 add_action( 'wp_after_header_benaceur', 'msgiben1' ); }
 if ( get_option( 'msg_interface_benaceur_top_content') )   {
