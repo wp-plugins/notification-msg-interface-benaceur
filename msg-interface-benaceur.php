@@ -3,7 +3,7 @@
 Plugin Name: Notification msg interface benaceur
 Plugin URI: https://wordpress.org/plugins/notification-msg-interface-benaceur/
 Description: A message appears below the header or the designated location
-Version: 1.2.2
+Version: 1.2.3
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2

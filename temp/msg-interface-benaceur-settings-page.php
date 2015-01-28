@@ -13,7 +13,7 @@
 	do_settings_sections( 'msg-interface-benaceur-settings-group' );
 ?>
 <tr valign="top"><th scope="row"><b><font color="#008080"><?php _e('Enable', 'msg-interface-benaceur'); ?></font></b></th><td>&nbsp;&nbsp;<input type="checkbox" name="msg_interface_benaceur_enable" id="msg_interface_benaceur_enable" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_msg' ] ); ?>/></td></tr></br></br>
-<p><?php _e('Content of the message:', 'msg-interface-benaceur'); ?></p> <p><textarea name="msg_interface_benaceur_text" style="padding:6px" cols="100%" rows="10"><?php echo $settings[ 'msgbeninterface' ]; ?></textarea></p> 
+<p><?php _e('Content of the message:', 'msg-interface-benaceur'); ?></p> <p><textarea name="msg_interface_benaceur_text" style="padding:6px" cols="100%" rows="10"><?php if ($settings['msgbeninterface']) echo $settings[ 'msgbeninterface' ]; else echo "Thank you for your choice for the plugin"; ?></textarea></p> 
 <table class="form-table" id='msgbeninterface-font-weight'>
 <tr valign="top"><th scope="row"><?php _e('Appear only to visitors', 'msg-interface-benaceur'); ?></th><td><input type="checkbox" name="msg_interface_benaceur_for_visitors" id="msg_interface_benaceur_for_visitors" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_visitors' ] ); ?>/></td></tr>
 <tr valign="top"><th scope="row"><?php _e('Appear only to users', 'msg-interface-benaceur'); ?></th><td><input type="checkbox" name="msg_interface_benaceur_for_users" id="msg_interface_benaceur_for_users" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_users' ] ); ?>/></td></tr>
