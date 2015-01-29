@@ -40,6 +40,8 @@
 <div class="sm_benaceurlist_caps_input"><input type="text" name="msg_interface_benaceur_for_list_ids" id="msg_interface_benaceur_for_list_ids" placeholder="<?php _e( 'Enter here the user id', 'msg-interface-benaceur' ); ?>" value="<?php echo esc_attr( $msg_interface_benaceur_list_ids ); ?>" size="45"/></div>
 &nbsp;&nbsp;<em><?php _e( 'Separate between id by commas, for example: 2,16,223', 'msg-interface-benaceur' ); ?></em>
 </td></tr>
+<tr valign="top"><th scope="row"><?php _e('Appear for the administrator group in all cases', 'msg-interface-benaceur'); ?></th><td><input type="checkbox" name="msg_interface_benaceur_administrator" id="msg_interface_benaceur_administrator" value="1"<?php checked( $settings[ 'msginterfacebenaceur_administrator' ] ); ?>/></td></tr>
+<tr valign="top"><th scope="row">&nbsp;</th><td><hr align="right" width="200" size="3"></td></tr>
 <tr valign="top"><th scope="row"><?php _e('or appear in home only', 'msg-interface-benaceur'); ?></th><td><input type="checkbox" name="msg_interface_benaceur_frontend" id="msg_interface_benaceur_frontend" value="1"<?php checked( $settings[ 'msginterfacebenaceur_frontend' ] ); ?>/></td></tr>
 <tr valign="top"><th scope="row">&nbsp;</th><td><hr align="right" width="200" size="3"></td></tr>
 <tr valign="top"><th scope="row"><?php _e('Appear top the post', 'msg-interface-benaceur'); ?></th><td><input type="checkbox" name="msg_interface_benaceur_top_content" id="msg_interface_benaceur_top_content" value="1"<?php checked( $settings['msginterfacebenaceur_top_content']); ?>/></td></tr>
