@@ -14,6 +14,7 @@
 ?>
 <tr valign="top"><th scope="row"><b><font color="#008080"><?php _e('Enable', 'msg-interface-benaceur'); ?></font></b></th><td>&nbsp;&nbsp;<input type="checkbox" name="msg_interface_benaceur_enable" id="msg_interface_benaceur_enable" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_msg' ] ); ?>/></td></tr></br></br>
 <p><?php _e('Content of the message:', 'msg-interface-benaceur'); ?></p> <p><textarea name="msg_interface_benaceur_text" style="padding:6px" cols="100%" rows="10"><?php if ($settings['msgbeninterface']) echo $settings[ 'msgbeninterface' ]; else echo "Thank you for your choice for the plugin"; ?></textarea></p> 
+&nbsp;&nbsp;<em><?php _e( 'To return to the line add at the end of the line: &lt;/br>', 'msg-interface-benaceur' ); ?></em>
 <table class="form-table" id='msgbeninterface-font-weight'>
 <tr valign="top"><th scope="row"><?php _e('Appear only to visitors', 'msg-interface-benaceur'); ?></th><td><input type="checkbox" name="msg_interface_benaceur_for_visitors" id="msg_interface_benaceur_for_visitors" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_visitors' ] ); ?>/></td></tr>
 <tr valign="top"><th scope="row"><?php _e('Appear only to users', 'msg-interface-benaceur'); ?></th><td><input type="checkbox" name="msg_interface_benaceur_for_users" id="msg_interface_benaceur_for_users" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_users' ] ); ?>/></td></tr>
@@ -213,15 +214,17 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_font_family']) echo $options_f['mib_msg_font_family']; else echo "Arial"; ?>" name="msg_interface_benaceur_m_options[mib_msg_font_family]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_font_family']) echo $options_f['mib_msg_font_family']; else echo "DroidKufi_Ben, Arial"; ?>" name="msg_interface_benaceur_m_options[mib_msg_font_family]" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("font-family",'msg-interface-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("font-family",'msg-interface-benaceur'); ?> </td></div> /
+                               <input type="checkbox"  value="enable" <?php checked('enable', $options_f['mib_msg_interface_disable_this_font']); ?> name="msg_interface_benaceur_m_options[mib_msg_interface_disable_this_font]" />
+                        <div class="colwrap-display"><td><?php _e("Disable this font: DroidKufi_Ben ",'msg-interface-benaceur'); ?> </td></div></br>
 					</tr>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_font_size']) echo $options_f['mib_msg_font_size']; else echo "20"; ?>" name="msg_interface_benaceur_m_options[mib_msg_font_size]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_font_size']) echo $options_f['mib_msg_font_size']; else echo "15"; ?>" name="msg_interface_benaceur_m_options[mib_msg_font_size]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("font-size",'msg-interface-benaceur'); ?> </td></div></br>

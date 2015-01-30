@@ -28,8 +28,8 @@ function msg_interface_benaceur_m_defaults(){
 		'mib_msg_border_px'    => '1',
 		'mib_msg_border_color'    => '#c6c6c6',
 		'mib_msg_border_radius'    => '',
-		'mib_msg_font_family'    => 'Arial',
-		'mib_msg_font_size'    => '20',
+		'mib_msg_font_family'    => 'DroidKufi_Ben, Arial',
+		'mib_msg_font_size'    => '15',
 		'mib_msg_font_weight'    => 'normal',
 		'mib_msg_text_align'    => 'center',
 		'mib_msg_text_shadow'    => '5px 5px 5px',
@@ -88,7 +88,8 @@ function msg_interface_benaceur_m_updates() {
     	'mib_msg_interface_delay_hide' =>$options_f['mib_msg_interface_delay_hide'],
     	'mib_msg_interface_delay_hide_anim' =>$options_f['mib_msg_interface_delay_hide_anim'],
     	'mib_msg_interface_delay_show' =>$options_f['mib_msg_interface_delay_show'],
-    	'mib_msg_interface_delay_show_anim' =>$options_f['mib_msg_interface_delay_show_anim']
+    	'mib_msg_interface_delay_show_anim' =>$options_f['mib_msg_interface_delay_show_anim'],
+    	'mib_msg_interface_disable_this_font' =>$options_f['mib_msg_interface_disable_this_font']
     );
 return $update_val;
 }
