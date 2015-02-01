@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Notification msg interface benaceur v1.2.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-01-30 16:58:25+0000\n"
+"PO-Revision-Date: 2015-02-01 19:14:37+0000\n"
 "Last-Translator: BENACEUR <mohamedcompte@hotmail.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -166,11 +166,6 @@ msgstr ""
 #@ msg-interface-benaceur
 msgid "border color"
 msgstr ""
-
-#: temp/msg-interface-benaceur-settings-page.php:164
-#@ msg-interface-benaceur
-msgid "Width by adding: px أو %"
-msgstr "العرض بإضافة : px أو %"
 
 #: temp/msg-interface-benaceur-settings-page.php:172
 #@ msg-interface-benaceur
@@ -346,4 +341,9 @@ msgstr "للرجوع إلى السطر أضف في نهاية السطر: &lt;/b
 #@ msg-interface-benaceur
 msgid "Disable this font: DroidKufi_Ben "
 msgstr "تعطيل هذا الخط: DroidKufi_Ben"
+
+#: temp/msg-interface-benaceur-settings-page.php:164
+#@ msg-interface-benaceur
+msgid "Width by adding: px or %"
+msgstr "العرض بإضافة px أو %"
 
