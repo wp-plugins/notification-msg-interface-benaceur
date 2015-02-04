@@ -3,7 +3,7 @@
 Plugin Name: Notification msg interface benaceur
 Plugin URI: http://benaceur-php.com/1714.aspx
 Description: A message appears below the header or the designated location
-Version: 1.2.6
+Version: 2.0
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -125,6 +125,7 @@ class Site_msg_interface_benaceur {
 	public function init() {
 
 		$settings = $this->get_settings( true );
+		$admin = current_user_can( 'administrator' );
         if ( $settings[ 'msg_interface_benaceur_enable_msg' ]  )  {		
         function fmib_f() { add_action('wp_head', 'function_msg_interface_benaceur_f'); }
         function fmib() { add_action('wp_head', 'function_msg_interface_benaceur'); }
@@ -135,9 +136,9 @@ class Site_msg_interface_benaceur {
     fmib();
 		}
 
-		if ( $settings[ 'msg_interface_benaceur_enable_visitors' ] && $settings[ 'msginterfacebenaceur_frontend' ] && ( !is_user_logged_in() || ( $settings[ 'msginterfacebenaceur_administrator' ] && current_user_can( 'administrator' )) ) ) {
+		if ( $settings[ 'msg_interface_benaceur_enable_visitors' ] && $settings[ 'msginterfacebenaceur_frontend' ] && ( !is_user_logged_in() || ( $settings[ 'msginterfacebenaceur_administrator' ] && $admin ) ) ) {
     fmib_f();
-    	} elseif ( $settings[ 'msg_interface_benaceur_enable_visitors' ] && ( !is_user_logged_in() || ( $settings[ 'msginterfacebenaceur_administrator' ] && current_user_can( 'administrator' )) ) ) {
+    	} elseif ( $settings[ 'msg_interface_benaceur_enable_visitors' ] && ( !is_user_logged_in() || ( $settings[ 'msginterfacebenaceur_administrator' ] && $admin ) ) ) {
     fmib();
 		}
 		
@@ -155,9 +156,9 @@ class Site_msg_interface_benaceur {
 			}
 
 			foreach ( $msg_interface_benaceur_list_roles as $role ) {
-				if ( (current_user_can( $role ) || ( $settings[ 'msginterfacebenaceur_administrator' ] && current_user_can( 'administrator' ))) && $settings[ 'msginterfacebenaceur_frontend' ] ) {
+				if ( (current_user_can( $role ) || ( $settings[ 'msginterfacebenaceur_administrator' ] && $admin )) && $settings[ 'msginterfacebenaceur_frontend' ] ) {
     fmib_f();
-		} elseif ( current_user_can( $role ) || ( $settings[ 'msginterfacebenaceur_administrator' ] && current_user_can( 'administrator' )) ) {
+		} elseif ( current_user_can( $role ) || ( $settings[ 'msginterfacebenaceur_administrator' ] && $admin ) ) {
     fmib();
 		}
 			}
@@ -169,9 +170,9 @@ class Site_msg_interface_benaceur {
 
 		if ( !empty( $msg_interface_benaceur_list_ids ) ) {
 			foreach ( $msg_interface_benaceur_list_ids as $user_id ) {
-				if ( ($current_user->ID == $user_id || ( $settings[ 'msginterfacebenaceur_administrator' ] && current_user_can( 'administrator' ))) && $settings[ 'msginterfacebenaceur_frontend' ]  ) {
+				if ( ($current_user->ID == $user_id || ( $settings[ 'msginterfacebenaceur_administrator' ] && $admin )) && $settings[ 'msginterfacebenaceur_frontend' ]  ) {
     fmib_f();
-		} elseif ( $current_user->ID == $user_id || ( $settings[ 'msginterfacebenaceur_administrator' ] && current_user_can( 'administrator' )) ) {
+		} elseif ( $current_user->ID == $user_id || ( $settings[ 'msginterfacebenaceur_administrator' ] && $admin ) ) {
     fmib();
 		}
 			}
