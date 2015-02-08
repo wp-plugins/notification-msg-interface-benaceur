@@ -12,7 +12,13 @@
 	settings_fields( 'msg-interface-benaceur-settings-group' );
 	do_settings_sections( 'msg-interface-benaceur-settings-group' );
 ?>
-<tr valign="top"><th scope="row"><b><font color="#008080"><?php _e('Enable', 'msg-interface-benaceur'); ?></font></b></th><td>&nbsp;&nbsp;<div class="switch demo1"><input type="checkbox" name="msg_interface_benaceur_enable" id="msg_interface_benaceur_enable" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_msg' ] ); ?>/><label></label></div></td></tr></br>
+<tr valign="top"><th scope="row"><center><b><font color="#008080"><?php _e('Enable', 'msg-interface-benaceur'); ?></font></br></center></b></th><td>&nbsp;&nbsp;<div class="switch demo1"><input type="checkbox" name="msg_interface_benaceur_enable" id="msg_interface_benaceur_enable" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_msg' ] ); ?>/><label></label></div></td></tr>
+<table  id='msgbeninterface-font-weight'>
+<tr valign="top"><th scope="row">&nbsp;</th><td><hr width="200" size="3"></td></tr>
+<tr valign="top"><td  scope="row"><div class="dd"><label><?php _e('Enable N-message-Ben on admin bar in frontend', 'msg-interface-benaceur'); ?></label></div></td><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_enable_nmb_on_admin_bar_in_front" class="switch-input" id="msg_interface_benaceur_enable_nmb_on_admin_bar_in_front" value="1"<?php checked( $settings[ 'msginterfacebenaceur_on_admin_bar_in_front' ] ); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
+<tr valign="top"><td scope="row"><div class="dd"><label><?php _e('Enable N-message-Ben on admin bar in admin panel', 'msg-interface-benaceur'); ?></label></div></td><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin" class="switch-input" id="msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin" value="1"<?php checked( $settings[ 'msginterfacebenaceur_on_admin_bar_in_admin' ] ); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
+<tr valign="top"><th scope="row">&nbsp;</th><td><hr width="200" size="3"></td></tr>
+</table>
 <p><?php _e('Content of the message:', 'msg-interface-benaceur'); ?></p> <p><textarea name="msg_interface_benaceur_text" style="padding:6px" cols="100%" rows="10"><?php if ($settings['msgbeninterface']) echo $settings[ 'msgbeninterface' ]; else echo "Thank you for your choice for the plugin"; ?></textarea></p> 
 &nbsp;&nbsp;<em><?php _e( 'To return to the line add at the end of the line: &lt;/br>', 'msg-interface-benaceur' ); ?></em>
 <table class="form-table" id='msgbeninterface-font-weight'>

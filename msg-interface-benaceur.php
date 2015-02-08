@@ -3,7 +3,7 @@
 Plugin Name: Notification msg interface benaceur
 Plugin URI: http://benaceur-php.com/1714.aspx
 Description: A message appears below the header or the designated location
-Version: 2.0
+Version: 2.1
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -79,6 +79,8 @@ class Site_msg_interface_benaceur {
 		register_setting( 'msg-interface-benaceur-settings-group', 'msg_interface_benaceur_align_msg_content_top' );
 		register_setting( 'msg-interface-benaceur-settings-group', 'msg_interface_benaceur_align_msg_content_bottom' );
 		register_setting( 'msg-interface-benaceur-settings-group', 'msg_interface_benaceur_administrator' );
+		register_setting( 'msg-interface-benaceur-settings-group', 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_front' );
+		register_setting( 'msg-interface-benaceur-settings-group', 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin' );
 	}
 
 	/**
@@ -105,7 +107,9 @@ class Site_msg_interface_benaceur {
 			'msginterfacebenaceur_align_msg' => get_option( 'msg_interface_benaceur_align_msg'),
 			'msginterfacebenaceur_align_msg_content_top' => get_option( 'msg_interface_benaceur_align_msg_content_top'),
 			'msginterfacebenaceur_align_msg_content_bottom' => get_option( 'msg_interface_benaceur_align_msg_content_bottom'),
-			'msginterfacebenaceur_administrator' => get_option( 'msg_interface_benaceur_administrator')
+			'msginterfacebenaceur_administrator' => get_option( 'msg_interface_benaceur_administrator'),
+			'msginterfacebenaceur_on_admin_bar_in_front' => get_option( 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_front'),
+			'msginterfacebenaceur_on_admin_bar_in_admin' => get_option( 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin')
 		);
 
 		$settings[ 'msg_interface_benaceur_list_roles' ] = array_map( 'trim', array_unique( array_filter( $settings[ 'msg_interface_benaceur_list_roles' ] ) ) );
@@ -213,5 +217,23 @@ class Site_msg_interface_benaceur {
 }
 global $site_msg_interface_benaceur;
 $site_msg_interface_benaceur = new Site_msg_interface_benaceur();
+
+
+    add_action( 'wp_before_admin_bar_render', 'mib_links_on_admin_bar', 102 );
+    function mib_links_on_admin_bar() {
+        if (current_user_can( 'manage_options' ) && get_option( 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_front') && !is_admin() && get_option( 'msg_interface_benaceur_enable')) {
+        global $wp_admin_bar;
+        $wp_admin_bar->add_menu( array(
+        'id' => 'lien-mib',
+        'title' => 'N-message-Ben',
+        'href' =>  admin_url('/admin.php?page=N-message-Ben')));
+		} elseif (current_user_can( 'manage_options' ) && get_option( 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin') && is_admin() && get_option( 'msg_interface_benaceur_enable'))  {
+        global $wp_admin_bar;
+        $wp_admin_bar->add_menu( array(
+        'id' => 'lien-mib',
+        'title' => 'N-message-Ben',
+        'href' =>  admin_url('/admin.php?page=N-message-Ben')));
+		}	
+    }
 
 require ('msg-interface-benaceur-func-style.php');
