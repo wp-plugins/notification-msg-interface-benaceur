@@ -3,7 +3,7 @@ Contributors: Benaceur
 Tags: Notification, message, frontend, to display a message, display a message below the header, show a message in post, message in post, display a message at the bottom the header, display a message at the top the header, display a message at the bottom the post, display a message at the bottom the post, notification below the header, notification in post, notification in post, notification at the bottom the header, notification at the top the header, notification at the bottom the post, notification at the bottom the post, text below the header, text in post, text in post, text at the bottom the header, text at the top the header, text at the bottom the post, text at the bottom the post
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 2.1
+Stable tag: 2.1.1
 License: GPLv2 or later
 
 A message appears below the header or the designated location.  
@@ -35,6 +35,8 @@ TRANSLATED IN FOLLOWING LANGUAGES:
 
 == Changelog ==
 
+= 2.1.1 =
+* Some modifications to the style of the options page in the admin panel.
 = 2.1 =
 * Adding a link to the plugin options page in the admin bar.
 = 2.0 =

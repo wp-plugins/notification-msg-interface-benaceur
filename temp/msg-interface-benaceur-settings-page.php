@@ -3,23 +3,23 @@
 	 * Admin settings page
 	 */
  ?> 
-<div class='wrap'> <h2><?php _e('Add a message', 'msg-interface-benaceur'); ?></h2> <form method="post" action="<?php echo esc_attr( $action ); ?>">
+<div id="wpcontent-benaceur"><div id="wpcontent-benaceur-top"></div><h2><?php _e('Add a message', 'msg-interface-benaceur'); ?></h2> <form method="post" action="<?php echo esc_attr( $action ); ?>">
 <p><?php _e('Note: After activating the plugin Put the following line in the place where you want the message to appear:', 'msg-interface-benaceur'); ?></p>
-<p><code>&lt;?php if (has_action('wp_after_header_benaceur')) wp_after_header_benaceur_(); ?></code></p>
+<div class="code-insert">&lt;?php if (has_action('wp_after_header_benaceur')) wp_after_header_benaceur_(); ?></div>
 <p><?php _e('but for text at the top or bottom of the article do not add any code to your theme', 'msg-interface-benaceur'); ?></p>
 </br><hr>
  <?php
 	settings_fields( 'msg-interface-benaceur-settings-group' );
 	do_settings_sections( 'msg-interface-benaceur-settings-group' );
 ?>
-<tr valign="top"><th scope="row"><center><b><font color="#008080"><?php _e('Enable', 'msg-interface-benaceur'); ?></font></br></center></b></th><td>&nbsp;&nbsp;<div class="switch demo1"><input type="checkbox" name="msg_interface_benaceur_enable" id="msg_interface_benaceur_enable" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_msg' ] ); ?>/><label></label></div></td></tr>
+<tr valign="top"><th scope="row"><center><b><font color="#24CD24"><?php _e('Enable', 'msg-interface-benaceur'); ?></font></br></center></b></th><td>&nbsp;&nbsp;<div class="switch demo1"><input type="checkbox" name="msg_interface_benaceur_enable" id="msg_interface_benaceur_enable" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_msg' ] ); ?>/><label></label></div></td></tr>
 <table  id='msgbeninterface-font-weight'>
-<tr valign="top"><th scope="row">&nbsp;</th><td><hr width="200" size="3"></td></tr>
+<tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
 <tr valign="top"><td  scope="row"><div class="dd"><label><?php _e('Enable N-message-Ben on admin bar in frontend', 'msg-interface-benaceur'); ?></label></div></td><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_enable_nmb_on_admin_bar_in_front" class="switch-input" id="msg_interface_benaceur_enable_nmb_on_admin_bar_in_front" value="1"<?php checked( $settings[ 'msginterfacebenaceur_on_admin_bar_in_front' ] ); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
 <tr valign="top"><td scope="row"><div class="dd"><label><?php _e('Enable N-message-Ben on admin bar in admin panel', 'msg-interface-benaceur'); ?></label></div></td><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin" class="switch-input" id="msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin" value="1"<?php checked( $settings[ 'msginterfacebenaceur_on_admin_bar_in_admin' ] ); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
-<tr valign="top"><th scope="row">&nbsp;</th><td><hr width="200" size="3"></td></tr>
+<tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
 </table>
-<p><?php _e('Content of the message:', 'msg-interface-benaceur'); ?></p> <p><textarea name="msg_interface_benaceur_text" style="padding:6px" cols="100%" rows="10"><?php if ($settings['msgbeninterface']) echo $settings[ 'msgbeninterface' ]; else echo "Thank you for your choice for the plugin"; ?></textarea></p> 
+<p><?php _e('Content of the message:', 'msg-interface-benaceur'); ?></p> <p><textarea name="msg_interface_benaceur_text" style="padding:6px" rows="8"><?php if ($settings['msgbeninterface']) echo $settings[ 'msgbeninterface' ]; else echo "Thank you for your choice for the plugin"; ?></textarea></p> 
 &nbsp;&nbsp;<em><?php _e( 'To return to the line add at the end of the line: &lt;/br>', 'msg-interface-benaceur' ); ?></em>
 <table class="form-table" id='msgbeninterface-font-weight'>
 <tr valign="top"><th scope="row"><div class="dd"><label><?php _e('Appear only to visitors', 'msg-interface-benaceur'); ?></label></div></th><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_for_visitors" class="switch-input" id="msg_interface_benaceur_for_visitors" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_visitors' ] ); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
@@ -48,9 +48,9 @@
 &nbsp;&nbsp;<em><?php _e( 'Separate between id by commas, for example: 2,16,223', 'msg-interface-benaceur' ); ?></em>
 </td></tr>
 <tr valign="top"><th scope="row"><div class="dd"><label><?php _e('Appear for the administrator group in all cases', 'msg-interface-benaceur'); ?></label></div></th><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_administrator" class="switch-input" id="msg_interface_benaceur_administrator" value="1"<?php checked( $settings[ 'msginterfacebenaceur_administrator' ] ); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
-<tr valign="top"><th scope="row">&nbsp;</th><td><hr align="right" width="200" size="3"></td></tr>
+<tr valign="top"><th scope="row" ><div class="to-tr"></div></th></tr>
 <tr valign="top"><th scope="row"><div class="dd"><label><?php _e('or appear in home only', 'msg-interface-benaceur'); ?></label></div></th><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_frontend" class="switch-input" id="msg_interface_benaceur_frontend" value="1"<?php checked( $settings[ 'msginterfacebenaceur_frontend' ] ); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
-<tr valign="top"><th scope="row">&nbsp;</th><td><hr align="right" width="200" size="3"></td></tr>
+<tr valign="top"><th scope="row" ><div class="to-tr"></div></th></tr>
 <tr valign="top"><th scope="row"><div class="dd"><label><?php _e('Appear top the post', 'msg-interface-benaceur'); ?></label></div></th><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_top_content" class="switch-input" id="msg_interface_benaceur_top_content" value="1"<?php checked( $settings['msginterfacebenaceur_top_content']); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
 					<tr>
 						<td>
@@ -69,7 +69,7 @@
 						</td>
 						<div class="colwrap-display"><td><?php _e("center/right/left",'msg-interface-benaceur'); ?> </td></div></br>
 					</tr>
-<tr valign="top"><th scope="row">&nbsp;</th><td><hr align="right" width="200" size="3"></td></tr>
+<tr valign="top"><th scope="row" ><div class="to-tr"></div></th></tr>
 <tr valign="top"><th scope="row"><div class="dd"><label><?php _e('Hide message (that outside the post)', 'msg-interface-benaceur'); ?></label></div></th><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_disable_msg_head" class="switch-input" id="msg_interface_benaceur_disable_msg_head" value="1"<?php checked( $settings[ 'msginterfacebenaceur_disable_msg_head' ] ); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
 					<tr>
 						<td>
@@ -79,7 +79,7 @@
 						</td>
 						<div class="colwrap-display"><td><?php _e("center/right/left",'msg-interface-benaceur'); ?> </td></div></br>
 					</tr>
-<tr valign="top"><th scope="row">&nbsp;</th><td><hr align="right" width="200" size="3"></td></tr>
+<tr valign="top"><th scope="row" ><div class="to-tr"></div></th></tr>
 </table>
 </br></br>
 <p><?php submit_button(); ?></p>
@@ -91,7 +91,6 @@
 ?>
       <input type="submit" value="<?php _e('Click to reset properties plugin', 'msg-interface-benaceur');?>" class="button-secondary" />
     </form></br>
-</div>
 </br><center><div id="msg_interface_benaceur-trait-horizontal"></div></center>
 	<div id="msg_interface_benaceur_font">
   <form method="post" action=""  name="options-form1">
@@ -292,7 +291,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 						</td>
 						<div class="colwrap-display"><td><?php _e("text shadow color",'msg-interface-benaceur'); ?> </td></div></br>
 					</tr>
-<hr width="200" size="3">
+<tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
@@ -301,7 +300,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 						</td>
 						<div class="colwrap-display"><td><?php _e("clignotement / default 450",'msg-interface-benaceur'); ?> </td></div></br>
 					</tr>
-<hr width="200" size="3">
+<tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
@@ -318,7 +317,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 						</td>
 						<div class="colwrap-display"><td><?php _e("Time of disappearance:1000 = 1second (Enter to disable it: 00)",'msg-interface-benaceur'); ?> </td></div></br>
 					</tr>
-<hr width="200" size="3">
+<tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
@@ -335,7 +334,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 						</td>
 						<div class="colwrap-display"><td><?php _e("Time appearing:1000 = 1second (Enter to disable it: 00)",'msg-interface-benaceur'); ?> </td></div></br>
 					</tr>
-<hr width="200" size="3">
+<tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
 					<tr>
 						<td>
 						<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
@@ -366,5 +365,6 @@ $options_f = get_option('msg_interface_benaceur_m_options');
       <input type="submit" value="<?php _e('Click to reset style properties plugin', 'msg-interface-benaceur');?>" class="button-secondary" />
 	  <input type="hidden" name="msg_interface_benaceur_m_update" value="true" />
     </form>
+</div>
 </div>
 

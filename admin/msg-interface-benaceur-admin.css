@@ -16,13 +16,11 @@ input[type="text"] {
 	padding: .35em 1em;
 }
 .styled-select select {
-    background-color: rgba(215, 40, 40, 0.9);
-    background: rgba(215, 40, 40, 0.9);
-    color: rgba(215, 40, 40, 0.9);
-	border: 0 none;
-	border-radius: 3px;
+    color:#fff;
+    border:1px solid #999999; 
+    border-radius:5px;
+    background-color:#9B005E;
 	font-family: Tahoma;
-	color: #fff;
 	font-size: 13px;
 	line-height: 1;
 	font-weight:bold;
@@ -137,7 +135,7 @@ input[type="text"]:focus::-webkit-input-placeholder {  color:transparent;}
   opacity: 0;
 }
 .switch-input:checked ~ .switch-label {
-  background:#DA3C3C;
+  background:#9B005E;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
 }
 .switch-input:checked ~ .switch-label:before {
@@ -282,3 +280,48 @@ input[type="text"]:focus::-webkit-input-placeholder {  color:transparent;}
       0 1px 0 rgba(255,255,255,0.4),
       0 0 10px 2px rgba(0, 210, 0, 0.5);
 }
+#wpcontent-benaceur {
+  margin:40px 60px 40px 80px;
+  padding:10px 10px 20px 10px;
+  border:solid 0px #000000;
+  border-radius:5px;
+  box-shadow: 6px 5px 8px #000000;
+  background-color: rgba(122, 0, 73, 1);
+  background: rgba(122, 0, 73, 1);
+  color: rgba(122, 0, 73, 1);
+}
+#wpcontent-benaceur-top {
+  background: url(https://ps.w.org/notification-msg-interface-benaceur/assets/banner-772x250.png) no-repeat top;
+  background-size: 100% 210px;
+  margin: 0px auto 0;
+  height:210px;
+  width:100%;
+}
+#wpcontent-benaceur form ,#wpcontent-benaceur form  th, #wpcontent-benaceur h2   {
+  color:#fff;
+}
+#wpcontent-benaceur textarea,#wpcontent-benaceur input ,#wpcontent-benaceur select{
+  color:#fff;
+  border:1px solid #999999; 
+  border-radius:5px;
+  background-color:#9B005E;
+}
+#wpcontent-benaceur textarea {
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#wpcontent-benaceur textarea:hover,#wpcontent-benaceur textarea:focus {
+  background:#B3006B;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#wpcontent-benaceur textarea {width:90%;}
+.to-tr {width:100%;border:0.1em solid #999999;}
+.to-tr2 {width:40%;border:0.1em solid #999999;margin-bottom:6px;}
+.code-insert {background:#9B005E;}
