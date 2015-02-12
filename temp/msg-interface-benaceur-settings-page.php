@@ -3,7 +3,6 @@
 	 * Admin settings page
 	 */
  ?> 
-</br><div id="message" class="updated" style="padding:10px;margin:20px"><?php _e('After this update Click on F5 to purge the browser cache (For those who have installed the previous version)', 'msg-interface-benaceur'); ?></div>
 <div id="wpcontent-benaceur"><div id="wpcontent-benaceur-top"></div><h2><?php _e('Add a message', 'msg-interface-benaceur'); ?></h2> <form method="post" action="<?php echo esc_attr( $action ); ?>">
 <p><?php _e('Note: After activating the plugin Put the following line in the place where you want the message to appear:', 'msg-interface-benaceur'); ?></p>
 <div class="code-insert">&lt;?php if (has_action('wp_after_header_benaceur')) wp_after_header_benaceur_(); ?></div>
@@ -369,3 +368,20 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 </div>
 </div>
 
+	<a href="#top"><div id="to-top"></div></a>
+	
+<style type="text/css">
+#to-top {
+  height:60px;
+  width:60px;
+  <?php if ( is_rtl() ) { ?>
+  background: url(<?php echo '' . plugins_url( '../admin/top-r.png', __FILE__ ) . ''; ?>) no-repeat ;
+  float:left;
+  margin-left:100px;
+  <?php } else { ?>
+  background: url(<?php echo '' . plugins_url( '../admin/top-l.png', __FILE__ ) . ''; ?>) no-repeat ;
+  float:right;
+  margin-right:60px;
+  <?php } ?>
+  }
+</style>
