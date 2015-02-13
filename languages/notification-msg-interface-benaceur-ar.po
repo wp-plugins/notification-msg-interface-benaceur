@@ -1,0 +1,379 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Notification msg interface benaceur v2.1.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-02-13 18:13:11+0000\n"
+"Last-Translator: BENACEUR <mohamedcompte@hotmail.fr>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Arabic\n"
+"X-Poedit-Country: SAUDI ARABIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: temp/msg-interface-benaceur-settings-page.php:6
+#@ notification-msg-interface-benaceur
+msgid "Add a message"
+msgstr "إضافة رسالة"
+
+#: temp/msg-interface-benaceur-settings-page.php:22
+#@ notification-msg-interface-benaceur
+msgid "Content of the message:"
+msgstr "محتوى الرسالة:"
+
+#: temp/msg-interface-benaceur-settings-page.php:31
+#@ notification-msg-interface-benaceur
+msgid "Remove Selection"
+msgstr "إلغاء التحديد"
+
+#: temp/msg-interface-benaceur-settings-page.php:43
+#@ notification-msg-interface-benaceur
+msgid "By the ID of the user:"
+msgstr "يظهر حسب المعرف ID:"
+
+#: temp/msg-interface-benaceur-settings-page.php:47
+#@ notification-msg-interface-benaceur
+msgid "Enter here the user id"
+msgstr "أدخل هنا رقم العضوية"
+
+#: temp/msg-interface-benaceur-settings-page.php:48
+#@ notification-msg-interface-benaceur
+msgid "Separate between id by commas, for example: 2,16,223"
+msgstr "افصل بين المعرفات بفاصلة (,) على سبيل المثال : 2,16,223"
+
+#: temp/msg-interface-benaceur-settings-page.php:7
+#@ notification-msg-interface-benaceur
+msgid "Note: After activating the plugin Put the following line in the place where you want the message to appear:"
+msgstr "ملاحظة: بعد تفعيل الإضافة ضع السطر التالي في المكان الذي تريد أن تظهر فيه الرسالة:\n"
+
+#: msg-interface-benaceur.php:195
+#@ n-message-Ben
+msgid "N-message-Ben"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:15
+#@ notification-msg-interface-benaceur
+msgid "Enable"
+msgstr "تفعيل"
+
+#: temp/msg-interface-benaceur-settings-page.php:25
+#@ notification-msg-interface-benaceur
+msgid "Appear only to visitors"
+msgstr "يظهر للزوار فقط"
+
+#: temp/msg-interface-benaceur-settings-page.php:26
+#@ notification-msg-interface-benaceur
+msgid "Appear only to users"
+msgstr "يظهر للأعضاء فقط"
+
+#: temp/msg-interface-benaceur-settings-page.php:27
+#@ notification-msg-interface-benaceur
+msgid "Appear to all"
+msgstr "يظهر للجميع"
+
+#: temp/msg-interface-benaceur-settings-page.php:28
+#@ notification-msg-interface-benaceur
+msgid "Appear to group:"
+msgstr "يظهر لمجموعة:"
+
+#: temp/msg-interface-benaceur-settings-page.php:52
+#@ notification-msg-interface-benaceur
+msgid "or appear in home only"
+msgstr "أو يظهر في الرئيسية فقط"
+
+#: temp/msg-interface-benaceur-settings-page.php:58
+#: temp/msg-interface-benaceur-settings-page.php:67
+#: temp/msg-interface-benaceur-settings-page.php:77
+#: temp/msg-interface-benaceur-settings-page.php:272
+#@ notification-msg-interface-benaceur
+msgid "centering"
+msgstr "توسيط"
+
+#: temp/msg-interface-benaceur-settings-page.php:58
+#: temp/msg-interface-benaceur-settings-page.php:67
+#: temp/msg-interface-benaceur-settings-page.php:77
+#: temp/msg-interface-benaceur-settings-page.php:272
+#@ notification-msg-interface-benaceur
+msgid "right"
+msgstr "يمين"
+
+#: temp/msg-interface-benaceur-settings-page.php:58
+#: temp/msg-interface-benaceur-settings-page.php:67
+#: temp/msg-interface-benaceur-settings-page.php:77
+#: temp/msg-interface-benaceur-settings-page.php:272
+#@ notification-msg-interface-benaceur
+msgid "left"
+msgstr "يسار"
+
+#: temp/msg-interface-benaceur-settings-page.php:61
+#: temp/msg-interface-benaceur-settings-page.php:70
+#: temp/msg-interface-benaceur-settings-page.php:80
+#: temp/msg-interface-benaceur-settings-page.php:275
+#@ notification-msg-interface-benaceur
+msgid "center/right/left"
+msgstr "توسيط/يمين/يسار"
+
+#: temp/msg-interface-benaceur-settings-page.php:73
+#@ notification-msg-interface-benaceur
+msgid "Hide message (that outside the post)"
+msgstr "إخفاء الرسالة (التي خارج الموضوع)"
+
+#: temp/msg-interface-benaceur-settings-page.php:101
+#@ notification-msg-interface-benaceur
+msgid "style properties"
+msgstr "خصائص الستايل"
+
+#: temp/msg-interface-benaceur-settings-page.php:102
+#@ notification-msg-interface-benaceur
+msgid "To disable any value enter: 00"
+msgstr "لتعطيل أي قيمة أدخل 00"
+
+#: temp/msg-interface-benaceur-settings-page.php:110
+#@ notification-msg-interface-benaceur
+msgid "The color of the first background"
+msgstr "لون الخلفية الأولى"
+
+#: temp/msg-interface-benaceur-settings-page.php:119
+#@ notification-msg-interface-benaceur
+msgid "The color of the second background (style1)"
+msgstr "لون الخلفية الثانية (ستايل1)"
+
+#: temp/msg-interface-benaceur-settings-page.php:128
+#@ notification-msg-interface-benaceur
+msgid "Text color"
+msgstr "لون النص"
+
+#: temp/msg-interface-benaceur-settings-page.php:136
+#@ notification-msg-interface-benaceur
+msgid "The level of transparency 1-0.1"
+msgstr "مستوى الشفافية 1-0.1"
+
+#: temp/msg-interface-benaceur-settings-page.php:177
+#@ notification-msg-interface-benaceur
+msgid "border color"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:201
+#@ notification-msg-interface-benaceur
+msgid "min width"
+msgstr "العرض على الأقل"
+
+#: temp/msg-interface-benaceur-settings-page.php:209
+#@ notification-msg-interface-benaceur
+msgid "The distance between the lines"
+msgstr "المسافة ما بين السطور"
+
+#: temp/msg-interface-benaceur-settings-page.php:217
+#@ notification-msg-interface-benaceur
+msgid "margin-top"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:225
+#@ notification-msg-interface-benaceur
+msgid "margin-bottom"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:233
+#@ notification-msg-interface-benaceur
+msgid "padding-top"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:241
+#@ notification-msg-interface-benaceur
+msgid "padding-bottom"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:249
+#@ notification-msg-interface-benaceur
+msgid "font-family"
+msgstr "نوع الخط"
+
+#: temp/msg-interface-benaceur-settings-page.php:259
+#@ notification-msg-interface-benaceur
+msgid "font-size"
+msgstr "حجم الخط"
+
+#: temp/msg-interface-benaceur-settings-page.php:264
+#@ notification-msg-interface-benaceur
+msgid "Normal"
+msgstr "عادي"
+
+#: temp/msg-interface-benaceur-settings-page.php:264
+#@ notification-msg-interface-benaceur
+msgid "Bold"
+msgstr "عريض"
+
+#: temp/msg-interface-benaceur-settings-page.php:267
+#@ notification-msg-interface-benaceur
+msgid "font-weight"
+msgstr "عرض الخط"
+
+#: temp/msg-interface-benaceur-settings-page.php:280
+#@ notification-msg-interface-benaceur
+msgid "no"
+msgstr "لا"
+
+#: temp/msg-interface-benaceur-settings-page.php:280
+#@ notification-msg-interface-benaceur
+msgid "yes"
+msgstr "نعم"
+
+#: temp/msg-interface-benaceur-settings-page.php:283
+#@ notification-msg-interface-benaceur
+msgid "text shadow"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:292
+#@ notification-msg-interface-benaceur
+msgid "text shadow color"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:301
+#@ notification-msg-interface-benaceur
+msgid "clignotement / default 450"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:310
+#@ notification-msg-interface-benaceur
+msgid "Hide text after:1000 = 1second (Leave blank to disable it)"
+msgstr "إخفاء النص بعد:1000=1ثانية (لتعطيله اتركه فارغا)"
+
+#: temp/msg-interface-benaceur-settings-page.php:318
+#@ notification-msg-interface-benaceur
+msgid "Time of disappearance:1000 = 1second (Enter to disable it: 00)"
+msgstr "وقت الاختفاء:1000=1ثانية (لتعطيله أدخل 00)"
+
+#: temp/msg-interface-benaceur-settings-page.php:327
+#@ notification-msg-interface-benaceur
+msgid "Show text after:1000 = 1second (Leave blank to disable it)"
+msgstr "إظهار النص بعد:1000=1ثانية (لتعطيله اتركه فارغا)"
+
+#: temp/msg-interface-benaceur-settings-page.php:335
+#@ notification-msg-interface-benaceur
+msgid "Time appearing:1000 = 1second (Enter to disable it: 00)"
+msgstr "وقت الظهور:1000=1ثانية (لتعطيله أدخل 00)"
+
+#: temp/msg-interface-benaceur-settings-page.php:358
+#@ notification-msg-interface-benaceur
+msgid "disable clignotement"
+msgstr "تعطيل disable clignotement"
+
+#: temp/msg-interface-benaceur-settings-page.php:342
+#@ notification-msg-interface-benaceur
+msgid "style1"
+msgstr "ستايل1"
+
+#: temp/msg-interface-benaceur-settings-page.php:343
+#@ notification-msg-interface-benaceur
+msgid "style2"
+msgstr "ستايل2"
+
+#: temp/msg-interface-benaceur-settings-page.php:347
+#@ notification-msg-interface-benaceur
+msgid "Choose the clignement Style"
+msgstr "اختيار ستايل الومض clignement"
+
+#: temp/msg-interface-benaceur-settings-page.php:372
+#@ notification-msg-interface-benaceur
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+#: temp/msg-interface-benaceur-settings-page.php:54
+#@ notification-msg-interface-benaceur
+msgid "Appear top the post"
+msgstr "يظهر أعلى الموضوع"
+
+#: temp/msg-interface-benaceur-settings-page.php:63
+#@ notification-msg-interface-benaceur
+msgid "Appear bottom the post"
+msgstr "يظهر أسفل الموضوع"
+
+#: temp/msg-interface-benaceur-settings-page.php:9
+#@ notification-msg-interface-benaceur
+msgid "but for text at the top or bottom of the article do not add any code to your theme"
+msgstr "لكن بالنسبة للنص الذي يظهر أعلى المقالة أو أسفل لا تضف أي كود إلى قالبك."
+
+#: temp/msg-interface-benaceur-settings-page.php:185
+#@ notification-msg-interface-benaceur
+msgid "border radius"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:376
+#@ notification-msg-interface-benaceur
+msgid "Click to reset style properties plugin"
+msgstr "انقر لإعادة تعيين خصائص الستايل الإفتراضية."
+
+#: temp/msg-interface-benaceur-settings-page.php:92
+#@ notification-msg-interface-benaceur
+msgid "Click to reset properties plugin"
+msgstr "انقر لإعادة تعيين خصائص الإضافة الإفتراضية."
+
+#: msg-interface-benaceur.php:16
+#@ notification-msg-interface-benaceur
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: temp/msg-interface-benaceur-settings-page.php:50
+#@ notification-msg-interface-benaceur
+msgid "Appear for the administrator group in all cases"
+msgstr "يظهر لمجموعة مدير في جميع الحالات"
+
+#: temp/msg-interface-benaceur-settings-page.php:23
+#@ notification-msg-interface-benaceur
+msgid "To return to the line add at the end of the line: &lt;/br>"
+msgstr "للرجوع إلى السطر أضف في نهاية السطر: &lt;/br>"
+
+#: temp/msg-interface-benaceur-settings-page.php:251
+#@ notification-msg-interface-benaceur
+msgid "Disable this font: DroidKufi_Ben "
+msgstr "تعطيل هذا الخط: DroidKufi_Ben"
+
+#: temp/msg-interface-benaceur-settings-page.php:193
+#@ notification-msg-interface-benaceur
+msgid "Width by adding: px or %"
+msgstr "العرض بإضافة px أو %"
+
+#: temp/msg-interface-benaceur-settings-page.php:18
+#@ notification-msg-interface-benaceur
+msgid "Enable N-message-Ben on admin bar in frontend"
+msgstr "تفعيل  N-message-Ben في شريط الإدارة (admin bar) على واجهة الموقع"
+
+#: temp/msg-interface-benaceur-settings-page.php:19
+#@ notification-msg-interface-benaceur
+msgid "Enable N-message-Ben on admin bar in admin panel"
+msgstr "تفعيل  N-message-Ben في شريط الإدارة (admin bar) في لوحة الإدارة"
+
+#: temp/msg-interface-benaceur-settings-page.php:144
+#@ notification-msg-interface-benaceur
+msgid "border top"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:152
+#@ notification-msg-interface-benaceur
+msgid "border bottom"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:160
+#@ notification-msg-interface-benaceur
+msgid "border right"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:168
+#@ notification-msg-interface-benaceur
+msgid "border left"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:369
+#@ notification-msg-interface-benaceur
+msgid "disable button close x"
+msgstr "تعطيل زر الإغلاق x"
+

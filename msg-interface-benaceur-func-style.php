@@ -15,7 +15,7 @@ function msg_interface_benaceur_scripts() {
 
 function msg_interface_benaceur_m_defaults(){
 	$default = array(
-	    'mib_msg_background'    => '#F3F3F3',
+	    'mib_msg_background'    => '#f18bb9',
 	    'mib_msg_background2'    => '#FFFFFF',
 		'mib_msg_txt_color'    => '#000000',
 		'mib_msg_line_height'    => '1.5',
@@ -29,10 +29,10 @@ function msg_interface_benaceur_m_defaults(){
 		'mib_msg_border_bottom'    => '1',
 		'mib_msg_border_right'    => '1',
 		'mib_msg_border_left'    => '1',
-		'mib_msg_border_color'    => '#c6c6c6',
-		'mib_msg_border_radius'    => '',
+		'mib_msg_border_color'    => '#920f1b',
+		'mib_msg_border_radius'    => '4',
 		'mib_msg_font_family'    => 'DroidKufi_Ben, Arial',
-		'mib_msg_font_size'    => '15',
+		'mib_msg_font_size'    => '14',
 		'mib_msg_font_weight'    => 'normal',
 		'mib_msg_text_align'    => 'center',
 		'mib_msg_text_shadow'    => '5px 5px 5px',
@@ -95,7 +95,8 @@ function msg_interface_benaceur_m_updates() {
     	'mib_msg_interface_delay_hide_anim' =>$options_f['mib_msg_interface_delay_hide_anim'],
     	'mib_msg_interface_delay_show' =>$options_f['mib_msg_interface_delay_show'],
     	'mib_msg_interface_delay_show_anim' =>$options_f['mib_msg_interface_delay_show_anim'],
-    	'mib_msg_interface_disable_this_font' =>$options_f['mib_msg_interface_disable_this_font']
+    	'mib_msg_interface_disable_this_font' =>$options_f['mib_msg_interface_disable_this_font'],
+    	'mib_msg_interface_disable_b_close' =>$options_f['mib_msg_interface_disable_b_close']
     );
 return $update_val;
 }

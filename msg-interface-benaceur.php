@@ -3,7 +3,7 @@
 Plugin Name: Notification msg interface benaceur
 Plugin URI: http://benaceur-php.com/1714.aspx
 Description: A message appears below the header or the designated location
-Version: 2.1.3
+Version: 2.1.4
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -13,13 +13,13 @@ define("NOTIFICATION_MSG_INTERFACE_BENACEUR", "N-message-Ben");
 
 // Add settings link on plugin page
 function msg_interface_benaceur_action_links($links){
-	$links[] = '<a href="'.get_admin_url(null, '?page='.NOTIFICATION_MSG_INTERFACE_BENACEUR.'').'">'.__("Settings", 'msg-interface-benaceur').'</a>';
+	$links[] = '<a href="'.get_admin_url(null, '?page='.NOTIFICATION_MSG_INTERFACE_BENACEUR.'').'">'.__("Settings", 'notification-msg-interface-benaceur').'</a>';
 	return $links;
 }
 add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'msg_interface_benaceur_action_links');
 // Add settings link on plugin page
 
-load_plugin_textdomain( 'msg-interface-benaceur', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+load_plugin_textdomain( 'notification-msg-interface-benaceur', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 		
     function wp_after_header_benaceur_() {  
         do_action('wp_after_header_benaceur');
