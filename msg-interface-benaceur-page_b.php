@@ -1,11 +1,32 @@
 <?php
 
 function msgiben2() {
-$ben_style2 = '
+	
+   $options_f = get_option('msg_interface_benaceur_m_options');
+
+if ( get_option('msg_interface_benaceur_align_msg') == 'center' ) {	?>
+<div align="center">
+<?php } elseif ( get_option('msg_interface_benaceur_align_msg') == 'right' ) { ?>
+<div align="right">
+<?php } elseif ( get_option('msg_interface_benaceur_align_msg') == 'left' ) { ?>
+<div align="left">
+<?php } ?>
 <div class="quick3-2">
 <div id="mib-msg-delay-show">
 <div id="mib-msg-delay-hide">
-<div id="mib_msg_interface-note-msgmea" class="msg_quick_ben"><span id="close_mib">x</span>'. get_option('msg_interface_benaceur_text') .'</div>
+<div id="mib_msg_interface-note-msgmea" class="msg_quick_ben"><span id="close_mib">
+<?php if ($options_f['mib_msg_interface_close_img']=='img'  ) { ?>
+<img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben1.png', __FILE__ ) . ''; ?>" width="16" height="16">
+<?php } elseif ($options_f['mib_msg_interface_close_img']=='img1') {  ?>
+<img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben.png', __FILE__ ) . ''; ?>" width="16" height="16">
+<?php } elseif ($options_f['mib_msg_interface_close_img']=='img2') {  ?>
+<img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben2.png', __FILE__ ) . ''; ?>" width="16" height="16">
+<?php } elseif ($options_f['mib_msg_interface_close_img']=='img3') {  ?>
+<img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben3.png', __FILE__ ) . ''; ?>" width="16" height="16">
+<?php } ?>
+</span><?php echo get_option('msg_interface_benaceur_text'); ?>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -17,101 +38,97 @@ document.getElementById("close_mib").addEventListener("click", function(e) {
 }, false);
 </script>
 
-';
-
-if ( get_option('msg_interface_benaceur_align_msg') == 'center' ) {
-echo '<div align="center">' 	
-. $ben_style2 . 
-'</div>';
- }
-elseif ( get_option('msg_interface_benaceur_align_msg') == 'right' ) {
-echo '<div align="right">' 	
-. $ben_style2 . 
-'</div>'; 
-}
-elseif ( get_option('msg_interface_benaceur_align_msg') == 'left' ) {
-echo '<div align="left">' 	
-. $ben_style2 . 
-'</div>';
- }
-
- }
+<?php }
 
 function add_text_content_benaceur_style2_av($content){
- $ben_style2_av = '
+	$options_f = get_option('msg_interface_benaceur_m_options');
+	
+if (is_single()):
+	
+if ( get_option('msg_interface_benaceur_align_msg_content_top') == 'center' ) {	?>
+<div align="center">
+<?php } elseif ( get_option('msg_interface_benaceur_align_msg_content_top') == 'right' ) { ?>
+<div align="right">
+<?php } elseif ( get_option('msg_interface_benaceur_align_msg_content_top') == 'left' ) { ?>
+<div align="left">
+<?php } ?>
 <div class="quick3-2-2">
 <div id="mib-msg-delay-show">
 <div id="mib-msg-delay-hide">
-<div id="mib_msg_interface-note-msgmea-2-av" class="msg_quick_ben">'. get_option('msg_interface_benaceur_text') .'</div>
+<div id="mib_msg_interface-note-msgmea-2-av" class="msg_quick_ben"><span id="close_mib_av">
+<?php if ($options_f['mib_msg_interface_close_img']=='img'  ) { ?>
+<img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben1.png', __FILE__ ) . ''; ?>" width="16" height="16">
+<?php } elseif ($options_f['mib_msg_interface_close_img']=='img1') {  ?>
+<img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben.png', __FILE__ ) . ''; ?>" width="16" height="16">
+<?php } elseif ($options_f['mib_msg_interface_close_img']=='img2') {  ?>
+<img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben2.png', __FILE__ ) . ''; ?>" width="16" height="16">
+<?php } elseif ($options_f['mib_msg_interface_close_img']=='img3') {  ?>
+<img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben3.png', __FILE__ ) . ''; ?>" width="16" height="16">
+<?php } ?>
+</span><?php echo get_option('msg_interface_benaceur_text') ?>
 </div>
 </div>
 </div>
-';
+</div>
+</div>
 
-	if(is_single()){
-if ( get_option('msg_interface_benaceur_align_msg_content_top') == 'center' ) {
-    $custom_content = '
-<div align="center">' 	
-. $ben_style2_av . 
-'</div>		
-	';
- }
-elseif ( get_option('msg_interface_benaceur_align_msg_content_top') == 'right' ) {
-    $custom_content = '
-<div align="right">' 	
-. $ben_style2_av . 
-'</div>		
-	';
- }
-elseif ( get_option('msg_interface_benaceur_align_msg_content_top') == 'left' ) {
-    $custom_content = '
-<div align="left">' 	
-. $ben_style2_av . 
-'</div>		
-	';
- }
+<script type="text/javascript">
+document.getElementById("close_mib_av").addEventListener("click", function(e) {
+    e.preventDefault();
+    this.parentNode.style.display = "none";
+}, false);
+</script>
+	<?php 
 	
 	return $custom_content . $content;
-}
-return $content;	
+endif;
+	return $content;	
 }	
 
 function add_text_content_benaceur_style2_ap($content){
- $ben_style2_ap = '
+   $options_f = get_option('msg_interface_benaceur_m_options');
+   
+	if(is_single()):
+     if ( get_option('msg_interface_benaceur_align_msg_content_bottom') == 'center' ) {
+     $content .= '<div align="center">';
+     } elseif ( get_option('msg_interface_benaceur_align_msg_content_bottom') == 'right' ) {
+     $content .= '<div align="right">';
+     } elseif ( get_option('msg_interface_benaceur_align_msg_content_bottom') == 'left' ) {
+     $content .= '<div align="left">';
+	 }
+	 $content .= '
 <div class="quick3-2-2">
 <div id="mib-msg-delay-show">
 <div id="mib-msg-delay-hide">
-<div id="mib_msg_interface-note-msgmea-2-ap" class="msg_quick_ben">'. get_option('msg_interface_benaceur_text') .'</div>
+<div id="mib_msg_interface-note-msgmea-2-ap" class="msg_quick_ben"><span id="close_mib_ap">';
+
+     if ($options_f['mib_msg_interface_close_img']=='img' || empty($options_f['mib_msg_interface_close_img']) )	{
+	 $content .='<img border="0" src=" ' . plugins_url( 'admin/close/close_ben1.png', __FILE__ ) . '" width="16" height="16">'; 
+     } elseif ($options_f['mib_msg_interface_close_img']=='img1') {
+	 $content .='<img border="0" src=" ' . plugins_url( 'admin/close/close_ben.png', __FILE__ ) . '" width="16" height="16">'; 
+	 } elseif ($options_f['mib_msg_interface_close_img']=='img2') {
+	 $content .='<img border="0" src=" ' . plugins_url( 'admin/close/close_ben2.png', __FILE__ ) . '" width="16" height="16">';
+	 } elseif ($options_f['mib_msg_interface_close_img']=='img3') {
+	 $content .='<img border="0" src=" ' . plugins_url( 'admin/close/close_ben3.png', __FILE__ ) . '" width="16" height="16">';
+	 }	
+
+ 	 $content .= '
+</span>'. get_option('msg_interface_benaceur_text') .'
+</div>
 </div>
 </div>
 </div>
 ';
-
-	if(is_single()){
-if ( get_option('msg_interface_benaceur_align_msg_content_bottom') == 'center' ) {
-    $custom_content = '
-<div align="center">' 	
-. $ben_style2_ap . 
-'</div>		
-	';
- }
-elseif ( get_option('msg_interface_benaceur_align_msg_content_bottom') == 'right' ) {
-    $custom_content = '
-<div align="right">' 	
-. $ben_style2_ap . 
-'</div>		
-	';
- }
-elseif ( get_option('msg_interface_benaceur_align_msg_content_bottom') == 'left' ) {
-    $custom_content = '
-<div align="left">' 	
-. $ben_style2_ap . 
-'</div>		
-	';
- }
+     $content .= '</div>';
+     $content .= '
+<script type="text/javascript">
+document.getElementById("close_mib_ap").addEventListener("click", function(e) {
+    e.preventDefault();
+    this.parentNode.style.display = "none";
+}, false);
+</script>';
 	
-    return $content . $custom_content;
-}
+	endif;
 return $content;	
 }
 
@@ -183,11 +200,11 @@ add_filter('the_content','add_text_content_benaceur_style2_ap'); }
 	border-radius:4px;
     border:1px solid transparent;
 	font-family:Arial;font-size:18px;font-weight:bold;text-align:center;
-	margin-top:-6px;
+	margin-top:-7px;
     <?php if ( is_rtl() ) { ?>
-	float:right;
-	<?php } else { ?>
 	float:left;
+	<?php } else { ?>
+	float:right;
 	<?php } ?>
 	
 	<?php if ( $options_f['mib_msg_interface_disable_b_close'] )  { ?>
@@ -195,6 +212,52 @@ add_filter('the_content','add_text_content_benaceur_style2_ap'); }
 	<?php } ?>
 }
 #close_mib:hover {
+    cursor:pointer;
+}
+
+#close_mib_av { 
+    position:relative;
+	color:#000;
+	width:13px;
+    margin-bottom:-2px;
+	border-radius:4px;
+    border:1px solid transparent;
+	font-family:Arial;font-size:18px;font-weight:bold;text-align:center;
+	margin-top:-7px;
+    <?php if ( is_rtl() ) { ?>
+	float:left;
+	<?php } else { ?>
+	float:right;
+	<?php } ?>
+	
+	<?php if ( $options_f['mib_msg_interface_disable_b_close'] )  { ?>
+    display:none;
+	<?php } ?>
+}
+#close_mib_av:hover {
+    cursor:pointer;
+}
+
+#close_mib_ap { 
+    position:relative;
+	color:#000;
+	width:13px;
+    margin-bottom:-2px;
+	border-radius:4px;
+    border:1px solid transparent;
+	font-family:Arial;font-size:18px;font-weight:bold;text-align:center;
+	margin-top:-7px;
+    <?php if ( is_rtl() ) { ?>
+	float:left;
+	<?php } else { ?>
+	float:right;
+	<?php } ?>
+	
+	<?php if ( $options_f['mib_msg_interface_disable_b_close'] )  { ?>
+    display:none;
+	<?php } ?>
+}
+#close_mib_ap:hover {
     cursor:pointer;
 }
 </style>

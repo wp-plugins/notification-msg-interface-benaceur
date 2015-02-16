@@ -96,7 +96,8 @@ function msg_interface_benaceur_m_updates() {
     	'mib_msg_interface_delay_show' =>$options_f['mib_msg_interface_delay_show'],
     	'mib_msg_interface_delay_show_anim' =>$options_f['mib_msg_interface_delay_show_anim'],
     	'mib_msg_interface_disable_this_font' =>$options_f['mib_msg_interface_disable_this_font'],
-    	'mib_msg_interface_disable_b_close' =>$options_f['mib_msg_interface_disable_b_close']
+    	'mib_msg_interface_disable_b_close' =>$options_f['mib_msg_interface_disable_b_close'],
+    	'mib_msg_interface_close_img' =>$options_f['mib_msg_interface_close_img']
     );
 return $update_val;
 }
