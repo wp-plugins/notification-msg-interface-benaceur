@@ -10,17 +10,17 @@ function msgiben1() {
    $options_f = get_option('msg_interface_benaceur_m_options');
    
 if ( get_option('msg_interface_benaceur_align_msg') == 'center' ) {	?>
-<div align="center">
+<div align="center" id="mib1">
 <?php } elseif ( get_option('msg_interface_benaceur_align_msg') == 'right' ) { ?>
-<div align="right">
+<div align="right" id="mib1">
 <?php } elseif ( get_option('msg_interface_benaceur_align_msg') == 'left' ) { ?>
-<div align="left">
+<div align="left" id="mib1">
 <?php } ?>
 <div class="quick3-2">
 <div id="mib-msg-delay-show">
 <div id="mib-msg-delay-hide">
 <div class="mib_msg_interface_quick2">
-<div id="mib_msg_interface-note-msgmea"  class="mib_msg_interface_quick"><div class="mib_msg_interface_quick3"><span id="close_mib">
+<div id="mib_msg_interface-note-msgmea"  class="mib_msg_interface_quick"><div class="mib_msg_interface_quick3"><span id="close_mib" onmouseup="setcookie('mib1',1)">
 <?php if ($options_f['mib_msg_interface_close_img']=='img' || empty($options_f['mib_msg_interface_close_img']) ) { ?>
 <img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben1.png', __FILE__ ) . ''; ?>" width="16" height="16">
 <?php } elseif ($options_f['mib_msg_interface_close_img']=='img1') {  ?>
@@ -37,13 +37,8 @@ if ( get_option('msg_interface_benaceur_align_msg') == 'center' ) {	?>
 </div>
 </div>
 
-<script type="text/javascript">
-document.getElementById("close_mib").addEventListener("click", function(e) {
-    e.preventDefault();
-    this.parentNode.style.display = "none";
-}, false);
-</script>
-   <?php 
+<?php include 'cook/hide-cook.php'; 
+
 }
 
 function add_text_content_benaceur_style1_av($content){
@@ -52,17 +47,17 @@ if (is_single()):
    $options_f = get_option('msg_interface_benaceur_m_options');
    
 if ( get_option('msg_interface_benaceur_align_msg_content_top') == 'center' ) {	?>
-<div align="center">
+<div align="center" id="mib2">
 <?php } elseif ( get_option('msg_interface_benaceur_align_msg_content_top') == 'right' ) { ?>
-<div align="right">
+<div align="right" id="mib2">
 <?php } elseif ( get_option('msg_interface_benaceur_align_msg_content_top') == 'left' ) { ?>
-<div align="left">
+<div align="left" id="mib2">
 <?php } ?>
 <div class="quick3-2-2">
 <div id="mib-msg-delay-show">
 <div id="mib-msg-delay-hide">
 <div class="mib_msg_interface_quick2">
-<div id="mib_msg_interface-note-msgmea-2-av"  class="mib_msg_interface_quick"><div class="mib_msg_interface_quick3"><span id="close_mib_av">
+<div id="mib_msg_interface-note-msgmea-2-av"  class="mib_msg_interface_quick"><div class="mib_msg_interface_quick3"><span id="close_mib_av" onmouseup="setcookie('mib2',1)">
 <?php if ($options_f['mib_msg_interface_close_img']=='img' || empty($options_f['mib_msg_interface_close_img']) ) { ?>
 <img border="0" src="<?php echo '' . plugins_url( 'admin/close/close_ben1.png', __FILE__ ) . ''; ?>" width="16" height="16">
 <?php } elseif ($options_f['mib_msg_interface_close_img']=='img1') {  ?>
@@ -79,13 +74,7 @@ if ( get_option('msg_interface_benaceur_align_msg_content_top') == 'center' ) {	
 </div>
 </div>
 
-<script type="text/javascript">
-document.getElementById("close_mib_av").addEventListener("click", function(e) {
-    e.preventDefault();
-    this.parentNode.style.display = "none";
-}, false);
-</script>
-	<?php 
+<?php include 'cook/hide-cook-av.php'; 
 	
 	return $custom_content . $content;
 endif;
@@ -97,48 +86,11 @@ function add_text_content_benaceur_style1_ap($content){
    $options_f = get_option('msg_interface_benaceur_m_options');
 
 	if(is_single()):
-     if ( get_option('msg_interface_benaceur_align_msg_content_bottom') == 'center' ) {
-     $content .= '<div align="center">';
-     } elseif ( get_option('msg_interface_benaceur_align_msg_content_bottom') == 'right' ) {
-     $content .= '<div align="right">';
-     } elseif ( get_option('msg_interface_benaceur_align_msg_content_bottom') == 'left' ) {
-     $content .= '<div align="left">';
-	 }
-	 $content .= '
-<div class="quick3-2-2">
-<div id="mib-msg-delay-show">
-<div id="mib-msg-delay-hide">
-<div class="mib_msg_interface_quick2">
-<div id="mib_msg_interface-note-msgmea-2-ap"  class="mib_msg_interface_quick"><div class="mib_msg_interface_quick3"><span id="close_mib_ap">';
-
-     if ($options_f['mib_msg_interface_close_img']=='img' || empty($options_f['mib_msg_interface_close_img']) )	{
-	 $content .='<img border="0" src=" ' . plugins_url( 'admin/close/close_ben1.png', __FILE__ ) . '" width="16" height="16">'; 
-     } elseif ($options_f['mib_msg_interface_close_img']=='img1') {
-	 $content .='<img border="0" src=" ' . plugins_url( 'admin/close/close_ben.png', __FILE__ ) . '" width="16" height="16">'; 
-	 } elseif ($options_f['mib_msg_interface_close_img']=='img2') {
-	 $content .='<img border="0" src=" ' . plugins_url( 'admin/close/close_ben2.png', __FILE__ ) . '" width="16" height="16">';
-	 } elseif ($options_f['mib_msg_interface_close_img']=='img3') {
-	 $content .='<img border="0" src=" ' . plugins_url( 'admin/close/close_ben3.png', __FILE__ ) . '" width="16" height="16">';
-	 }	
-	 
- 	 $content .= '
-</span>'. get_option('msg_interface_benaceur_text') .'
-</div></div>
-</div>
-</div>
-</div>
-</div>
-';
-     $content .= '</div>';
-     $content .= '
-<script type="text/javascript">
-document.getElementById("close_mib_ap").addEventListener("click", function(e) {
-    e.preventDefault();
-    this.parentNode.style.display = "none";
-}, false);
-</script>';
-	
-	endif;
+// mib3 *********************************
+   include 'cook/hide-cook-ap-a.php'; 
+// mib3 *********************************
+     return $content . $mib3 ;
+	 endif;
 return $content;	
 }
 

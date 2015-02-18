@@ -43,7 +43,9 @@ function msg_interface_benaceur_m_defaults(){
 		'mib_msg_interface_delay_hide'    => '',
 		'mib_msg_interface_delay_hide_anim'    => '2000',
 		'mib_msg_interface_delay_show'    => '',
-		'mib_msg_interface_delay_show_anim'    => '3000'
+		'mib_msg_interface_delay_show_anim'    => '3000',
+		'mib_msg_interface_time_a_show'    => 'hour',
+		'mib_msg_interface_enter_time'    => '0'
 		);
 return $default;
 }
@@ -97,7 +99,9 @@ function msg_interface_benaceur_m_updates() {
     	'mib_msg_interface_delay_show_anim' =>$options_f['mib_msg_interface_delay_show_anim'],
     	'mib_msg_interface_disable_this_font' =>$options_f['mib_msg_interface_disable_this_font'],
     	'mib_msg_interface_disable_b_close' =>$options_f['mib_msg_interface_disable_b_close'],
-    	'mib_msg_interface_close_img' =>$options_f['mib_msg_interface_close_img']
+    	'mib_msg_interface_close_img' =>$options_f['mib_msg_interface_close_img'],
+    	'mib_msg_interface_time_a_show' =>$options_f['mib_msg_interface_time_a_show'],
+    	'mib_msg_interface_enter_time' =>$options_f['mib_msg_interface_enter_time']
     );
 return $update_val;
 }

@@ -373,7 +373,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					</br>
 					<tr>
 						<td>
-                   <input type="radio" name="msg_interface_benaceur_m_options[mib_msg_interface_close_img]" value="img" <?php if( $options_f['mib_msg_interface_close_img'] == 'img')echo 'checked';?> >
+                   <input type="radio" name="msg_interface_benaceur_m_options[mib_msg_interface_close_img]" value="img" <?php if( $options_f['mib_msg_interface_close_img'] == 'img' || $options_f['mib_msg_interface_close_img'] == '')echo 'checked';?> >
                     <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( '../admin/close/close_ben1.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
 					</tr></br>
 					<tr> 
@@ -394,6 +394,26 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 						</td>
                     <div class="colwrap-display">&nbsp;&nbsp;<td><img border="0" src="<?php echo '' . plugins_url( '../admin/close/close_ben3.png', __FILE__ ) . ''; ?>" width="16" height="16"></td></div>
 					</tr></br>
+					<tr>
+						<td>
+						<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
+						<div class="bold-4"><div class="bold-3"><select  name="msg_interface_benaceur_m_options[mib_msg_interface_time_a_show]" class="msg_interface_benaceur_color_inp">
+						<option value="hour" <?php selected('hour', $options_f['mib_msg_interface_time_a_show']); ?>><?php _e('Hour(s)', 'notification-msg-interface-benaceur'); ?></option>
+						<option value="minute" <?php selected('minute', $options_f['mib_msg_interface_time_a_show']); ?>><?php _e('Minute(s)', 'notification-msg-interface-benaceur'); ?></option>
+						</select></div></div>
+						</div></div>
+						</td>
+						<div class="colwrap-display"><td><?php _e("Time to appear after closing",'notification-msg-interface-benaceur'); ?> </td></div></br>
+					</tr>
+					<tr>
+						<td>
+							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_interface_enter_time']) echo $options_f['mib_msg_interface_enter_time']; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_interface_enter_time]" />
+							</div></div>
+						</td>
+						<div class="colwrap-display"><td><?php _e("Enter the time (Enter 0 to disable)",'notification-msg-interface-benaceur'); ?> </td></div></br>
+					</tr>
+<tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
 </br></br>
 <p class="submit"><input type="submit" id="msg_interface_benaceur_m_update" name="msg_interface_benaceur_m_update" class="button button-primary" value="<?php _e('Save Changes', 'notification-msg-interface-benaceur');?>"  /></p>
 				</div>
@@ -401,6 +421,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
     <form action="" method="post">
       <input type="submit" value="<?php _e('Click to reset style properties plugin', 'notification-msg-interface-benaceur');?>" class="button-secondary" />
 	  <input type="hidden" name="msg_interface_benaceur_m_update" value="true" />
+      <input type="hidden" name="msg_interface_benaceur_m_options[mib_msg_interface_close_img]" value="img" <?php if( $options_f['mib_msg_interface_close_img'] == '')echo 'checked';?> >
     </form>
 </div>
 </div>

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Notification msg interface benaceur v2.1.4\n"
+"Project-Id-Version: Notification msg interface benaceur v2.1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-02-13 18:13:11+0000\n"
+"PO-Revision-Date: 2015-02-18 20:16:55+0000\n"
 "Last-Translator: BENACEUR <mohamedcompte@hotmail.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -282,7 +282,7 @@ msgstr "ستايل2"
 msgid "Choose the clignement Style"
 msgstr "اختيار ستايل الومض clignement"
 
-#: temp/msg-interface-benaceur-settings-page.php:372
+#: temp/msg-interface-benaceur-settings-page.php:418
 #@ notification-msg-interface-benaceur
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
@@ -307,7 +307,7 @@ msgstr "لكن بالنسبة للنص الذي يظهر أعلى المقالة
 msgid "border radius"
 msgstr ""
 
-#: temp/msg-interface-benaceur-settings-page.php:376
+#: temp/msg-interface-benaceur-settings-page.php:422
 #@ notification-msg-interface-benaceur
 msgid "Click to reset style properties plugin"
 msgstr "انقر لإعادة تعيين خصائص الستايل الإفتراضية."
@@ -372,8 +372,28 @@ msgstr ""
 msgid "border left"
 msgstr ""
 
-#: temp/msg-interface-benaceur-settings-page.php:369
+#: temp/msg-interface-benaceur-settings-page.php:371
 #@ notification-msg-interface-benaceur
 msgid "disable button close x"
 msgstr "تعطيل زر الإغلاق x"
+
+#: temp/msg-interface-benaceur-settings-page.php:401
+#@ notification-msg-interface-benaceur
+msgid "Hour(s)"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:402
+#@ notification-msg-interface-benaceur
+msgid "Minute(s)"
+msgstr ""
+
+#: temp/msg-interface-benaceur-settings-page.php:406
+#@ notification-msg-interface-benaceur
+msgid "Time to appear after closing"
+msgstr "وقت الظهور بعد الإغلاق"
+
+#: temp/msg-interface-benaceur-settings-page.php:414
+#@ notification-msg-interface-benaceur
+msgid "Enter the time (Enter 0 to disable)"
+msgstr "أدخل الوقت (أدخل 0 للتعطيل) "
 
