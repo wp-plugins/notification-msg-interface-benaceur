@@ -10,6 +10,10 @@ function msg_interface_benaceur_scripts() {
 		wp_enqueue_script('msg_interface_benaceur_scripts',plugins_url('admin/msg-interface-benaceur-admin.js',__FILE__), array('jquery'));
 		wp_enqueue_style('msg_interface_benaceur_scripts',plugins_url('admin/msg-interface-benaceur-admin.css',__FILE__), false, '1.0.0' );
 		wp_enqueue_style('farbtastic');	
+		if (isset($_GET['settings-updated']) && $_GET['page'] == 'N-message-Ben') {
+		wp_enqueue_script ('jquery');
+		wp_enqueue_script('msg_interface_benaceur_scripts_saved',plugins_url('admin/min-ben.js',__FILE__), array('jquery'));
+		}
 	}
 }
 

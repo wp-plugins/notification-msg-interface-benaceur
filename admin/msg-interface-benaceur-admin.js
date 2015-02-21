@@ -21,3 +21,20 @@ jQuery(document).ready(function(){
 	});
 	
 });
+
+// h/s settings-updated 5 seconds later			
+    window.setTimeout(function() {
+	$("#Slider").toggleClass("slidedown slideup");
+        // This will execute 5 seconds later
+        var label = document.getElementById('slidedown slideup');
+        if (label != null) {
+            label.style.display = 'none';
+        }
+    }, 600);
+	
+function showIt() {
+	$("#Slider").toggleClass("slidedown slideup");
+document.getElementById("slidedown slideup").style.display = "block";
+}
+setTimeout("showIt()",3500);
+// h settings-updated 5 seconds later			

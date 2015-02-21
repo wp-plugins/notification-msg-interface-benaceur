@@ -3,7 +3,18 @@
 	 * Admin settings page
 	 */
  ?> 
-<div id="wpcontent-benaceur"><div id="wpcontent-benaceur-top"></div><h2><?php _e('Add a message', 'notification-msg-interface-benaceur'); ?></h2> <form method="post" action="<?php echo esc_attr( $action ); ?>">
+<div id="wpcontent-benaceur"><div id="wpcontent-benaceur-top"></div>
+<!-- hide/show settings updated -->		
+<?php if( isset($_GET['settings-updated']) && $_GET['page'] == 'N-message-Ben' ) { ?>
+	<script data-require="jquery@2.0.3" data-semver="2.0.3" <?php echo 'src="' . plugins_url( '../admin/min-ben.js', __FILE__ ) . '"'; ?>></script>
+      <div id="Slider" class="slideup">
+    <div id="h-s-msg-nab" id="message" class="updated" style="background:#B3006B;color:white;margin:20px 0 20px 0;">
+        <p><strong><?php _e('Settings saved.') ?></strong></p>
+    </div>
+      </div>
+<?php } ?>
+<!-- hide/show settings updated -->		
+<h2><?php _e('Add a message', 'notification-msg-interface-benaceur'); ?></h2> <form method="post" action="<?php echo esc_attr( $action ); ?>">
 <p><?php _e('Note: After activating the plugin Put the following line in the place where you want the message to appear:', 'notification-msg-interface-benaceur'); ?></p>
 <div class="code-insert">&lt;?php if (has_action('wp_after_header_benaceur')) wp_after_header_benaceur_(); ?></div>
 <p><?php _e('but for text at the top or bottom of the article do not add any code to your theme', 'notification-msg-interface-benaceur'); ?></p>
