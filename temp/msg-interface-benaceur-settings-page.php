@@ -5,8 +5,8 @@
  ?> 
 <div id="wpcontent-benaceur"><div id="wpcontent-benaceur-top"></div>
 <!-- hide/show settings updated -->		
-<?php if( isset($_GET['settings-updated']) && $_GET['page'] == 'N-message-Ben' ) { ?>
-	<script data-require="jquery@2.0.3" data-semver="2.0.3" <?php echo 'src="' . plugins_url( '../admin/min-ben.js', __FILE__ ) . '"'; ?>></script>
+<?php if ( (isset($_GET['settings-updated']) || isset($_POST['msg_interface_benaceur_m_options'])) && ($_GET['page'] == 'N-message-Ben' ) ) { ?>
+	<script <?php echo 'src="' . plugins_url( '../admin/min-ben.js', __FILE__ ) . '"'; ?>></script>
       <div id="Slider" class="slideup">
     <div id="h-s-msg-nab" id="message" class="updated" style="background:#B3006B;color:white;margin:20px 0 20px 0;">
         <p><strong><?php _e('Settings saved.') ?></strong></p>
