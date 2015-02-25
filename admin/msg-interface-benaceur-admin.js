@@ -1,24 +1,24 @@
 /*-- Admin Script
 ------------------------------------------*/
-var $j = jQuery.noConflict();
-$j(document).ready(function(){
+var $j_MIB = jQuery.noConflict();
+$j_MIB(document).ready(function(){
 
-	$j('#msg_interface_benaceur_font .handlediv,.hndle').click(function(){
-		$j(this).parent().find('.inside').slideToggle("fast");
+	$j_MIB('#msg_interface_benaceur_font .handlediv,.hndle').click(function(){
+		$j_MIB(this).parent().find('.inside').slideToggle("fast");
 	});
 	
-	if ($j("#msg_interface_benaceur_font").length){
-		$j('.msg_interface_benaceur_colorScheme1').farbtastic('#msg_interface_benaceur_colorScheme1');
-		$j('.msg_interface_benaceur_colorScheme2').farbtastic('#msg_interface_benaceur_colorScheme2');
-		$j('.msg_interface_benaceur_txtclr').farbtastic('#msg_interface_benaceur_txtclr');
-		$j('.msg_interface_benaceur_colorBorder').farbtastic('#msg_interface_benaceur_colorBorder');
-		$j('.msg_interface_benaceur_textshadowcolor').farbtastic('#msg_interface_benaceur_textshadowcolor');
+	if ($j_MIB("#msg_interface_benaceur_font").length){
+		$j_MIB('.msg_interface_benaceur_colorScheme1').farbtastic('#msg_interface_benaceur_colorScheme1');
+		$j_MIB('.msg_interface_benaceur_colorScheme2').farbtastic('#msg_interface_benaceur_colorScheme2');
+		$j_MIB('.msg_interface_benaceur_txtclr').farbtastic('#msg_interface_benaceur_txtclr');
+		$j_MIB('.msg_interface_benaceur_colorBorder').farbtastic('#msg_interface_benaceur_colorBorder');
+		$j_MIB('.msg_interface_benaceur_textshadowcolor').farbtastic('#msg_interface_benaceur_textshadowcolor');
 	}
-	$j('html').click(function() {$j("#msg_interface_benaceur_font .farbtastic").fadeOut('fast');});
+	$j_MIB('html').click(function() {$j_MIB("#msg_interface_benaceur_font .farbtastic").fadeOut('fast');});
 	
-	$j('#msg_interface_benaceur_font .msg_interface_benaceur_colsel').click(function(event){
-		$j("#msg_interface_benaceur_font .farbtastic").hide();
-		$j(this).find(".farbtastic").fadeIn('fast');event.stopPropagation();
+	$j_MIB('#msg_interface_benaceur_font .msg_interface_benaceur_colsel').click(function(event){
+		$j_MIB("#msg_interface_benaceur_font .farbtastic").hide();
+		$j_MIB(this).find(".farbtastic").fadeIn('fast');event.stopPropagation();
 	});
 	
 });
@@ -33,9 +33,16 @@ $j(document).ready(function(){
         }
     }, 600);
 	
-function showIt() {
+function showIt_mib() {
 	$("#Slider").toggleClass("slidedown slideup");
 document.getElementById("slidedown slideup").style.display = "block";
 }
-setTimeout("showIt()",3500);
+setTimeout("showIt_mib()",3500);
 // h settings-updated 5 seconds later			
+
+// style select for opera (mib)			
+var isOpera_mib = !!window.opera || navigator.userAgent.indexOf(" OPR/") >= 0;
+if (isOpera_mib) {
+document.write("<style>#wpcontent-benaceur select {color:#000;background-color:#909090;}</style>");
+}
+// style select for opera (mib)			
