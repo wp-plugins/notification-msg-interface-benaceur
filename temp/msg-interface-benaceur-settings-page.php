@@ -26,6 +26,13 @@
 <tr valign="top"><th scope="row"><center><b><font color="#24CD24"><?php _e('Enable', 'notification-msg-interface-benaceur'); ?></font></br></center></b></th><td>&nbsp;&nbsp;<div class="switch demo1"><input type="checkbox" name="msg_interface_benaceur_enable" id="msg_interface_benaceur_enable" value="1"<?php checked( $settings[ 'msg_interface_benaceur_enable_msg' ] ); ?>/><label></label></div></td></tr>
 <table  id='msgbeninterface-font-weight'>
 <tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
+					<tr>
+						<td>
+						<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
+						<div class="bold-3"><select style="min-width:110px;text-align:center;"  name="msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin_menu"><option value="menu" <?php selected('menu', $settings['msginterfacebenaceur_on_admin_bar_in_admin_menu']); ?>><?php _e('Menu', 'notification-msg-interface-benaceur'); ?></option><option value="submenu" <?php selected('submenu', $settings['msginterfacebenaceur_on_admin_bar_in_admin_menu']); ?>><?php _e('Submenu', 'notification-msg-interface-benaceur'); ?></option></select></div>
+						</div></div>
+						</td>
+					</tr>
 <tr valign="top"><td  scope="row"><div class="dd"><?php _e('Enable N-message-Ben on admin bar in frontend', 'notification-msg-interface-benaceur'); ?></div></td><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_enable_nmb_on_admin_bar_in_front" class="switch-input" id="msg_interface_benaceur_enable_nmb_on_admin_bar_in_front" value="1"<?php checked( $settings[ 'msginterfacebenaceur_on_admin_bar_in_front' ] ); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
 <tr valign="top"><td scope="row"><div class="dd"><?php _e('Enable N-message-Ben on admin bar in admin panel', 'notification-msg-interface-benaceur'); ?></div></td><td><label class="switch-nab"><input type="checkbox" name="msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin" class="switch-input" id="msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin" value="1"<?php checked( $settings[ 'msginterfacebenaceur_on_admin_bar_in_admin' ] ); ?>/><span class="switch-label" data-on="On" data-off="Off"></span><span class="switch-handle"></span></label></td></tr>
 <tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
