@@ -3,7 +3,7 @@
 Plugin Name: Notification msg interface benaceur
 Plugin URI: http://benaceur-php.com/1714.aspx
 Description: A message appears below the header or the designated location
-Version: 2.2
+Version: 2.2.1
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -241,11 +241,16 @@ $wp_admin_bar->add_menu( array( 'parent' => 'site-name', 'id' => 'PLB4', 'title'
 // admin_bar
 
 // ADMIN NOTICES
-    $plugin_data = get_plugin_data( __FILE__ );
-		
-    if ( $plugin_data['Version'] == '2.1.9' && $_GET['page'] == 'N-message-Ben' ) {
+    add_action( 'admin_init', 'mib_admin_notices' );
+    function mib_admin_notices() {
+	if ( function_exists( 'get_plugin_data' ) ) {
+    $plugin_data_mib = get_plugin_data( __FILE__ );
+
+    if ( $plugin_data_mib['Version'] == '2.1.9' && $_GET['page'] == 'N-message-Ben' ) {
     include ('temp/notices-mib.php');
-    }	
+    }
+	}
+	}
 // ADMIN NOTICES
 	
 require ('msg-interface-benaceur-func-style.php');
