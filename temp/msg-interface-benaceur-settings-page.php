@@ -117,7 +117,6 @@
 $options_f = get_option('msg_interface_benaceur_m_options');
 ?>
 <label><b><font face="Arial" size="4"><?php _e('style properties', 'notification-msg-interface-benaceur');?>:</font></b></label></br></br>
-<p><?php _e('To disable any value enter: 00', 'notification-msg-interface-benaceur'); ?></p>
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
@@ -156,7 +155,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_border_top']) echo $options_f['mib_msg_border_top']; else echo "1"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_top]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_border_top'])) echo $options_f['mib_msg_border_top']; elseif ($options_f['mib_msg_border_top'] == '') echo "1"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_top]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("border top",'notification-msg-interface-benaceur'); ?> </td></div></br>
@@ -164,7 +163,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_border_bottom']) echo $options_f['mib_msg_border_bottom']; else echo "1"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_bottom]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_border_bottom'])) echo $options_f['mib_msg_border_bottom']; elseif ($options_f['mib_msg_border_bottom'] == '') echo "1"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_bottom]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("border bottom",'notification-msg-interface-benaceur'); ?> </td></div></br>
@@ -172,7 +171,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_border_right']) echo $options_f['mib_msg_border_right']; else echo "1"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_right]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_border_right'])) echo $options_f['mib_msg_border_right']; elseif ($options_f['mib_msg_border_right'] == '') echo "1"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_right]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("border right",'notification-msg-interface-benaceur'); ?> </td></div></br>
@@ -180,7 +179,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_border_left']) echo $options_f['mib_msg_border_left']; else echo "1"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_left]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_border_left'])) echo $options_f['mib_msg_border_left']; elseif ($options_f['mib_msg_border_left'] == '') echo "1"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_left]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("border left",'notification-msg-interface-benaceur'); ?> </td></div></br>
@@ -197,7 +196,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_border_radius']) echo $options_f['mib_msg_border_radius']; else echo "4"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_radius]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius']; elseif ($options_f['mib_msg_border_radius'] == '') echo "4"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_border_radius]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("border radius",'notification-msg-interface-benaceur'); ?> </td></div></br>
@@ -229,7 +228,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_margin_top']) echo $options_f['mib_msg_margin_top']; else echo "10"; ?>" name="msg_interface_benaceur_m_options[mib_msg_margin_top]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_margin_top'])) echo $options_f['mib_msg_margin_top']; elseif ($options_f['mib_msg_margin_top'] == '') echo "10"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_margin_top]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("margin-top",'notification-msg-interface-benaceur'); ?> </td></div></br>
@@ -237,7 +236,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_margin_bottom']) echo $options_f['mib_msg_margin_bottom']; else echo "10"; ?>" name="msg_interface_benaceur_m_options[mib_msg_margin_bottom]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_margin_bottom'])) echo $options_f['mib_msg_margin_bottom']; elseif ($options_f['mib_msg_margin_bottom'] == '') echo "10"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_margin_bottom]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("margin-bottom",'notification-msg-interface-benaceur'); ?> </td></div></br>
@@ -245,7 +244,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_padding_top']) echo $options_f['mib_msg_padding_top']; else echo "8"; ?>" name="msg_interface_benaceur_m_options[mib_msg_padding_top]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_padding_top'])) echo $options_f['mib_msg_padding_top']; elseif ($options_f['mib_msg_padding_top'] == '') echo "8"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_padding_top]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("padding-top",'notification-msg-interface-benaceur'); ?> </td></div></br>
@@ -253,7 +252,7 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_padding_bottom']) echo $options_f['mib_msg_padding_bottom']; else echo "8"; ?>" name="msg_interface_benaceur_m_options[mib_msg_padding_bottom]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_padding_bottom'])) echo $options_f['mib_msg_padding_bottom']; elseif ($options_f['mib_msg_padding_bottom'] == '') echo "8"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_padding_bottom]" />
 							</div></div>
 						</td>
 						<div class="colwrap-display"><td><?php _e("padding-bottom",'notification-msg-interface-benaceur'); ?> </td></div></br>
@@ -330,10 +329,10 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_interface_delay_hide_anim']) echo $options_f['mib_msg_interface_delay_hide_anim']; else echo "2000"; ?>" name="msg_interface_benaceur_m_options[mib_msg_interface_delay_hide_anim]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_interface_delay_hide_anim'])) echo $options_f['mib_msg_interface_delay_hide_anim']; elseif ($options_f['mib_msg_interface_delay_hide_anim'] == '') echo "2000"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_interface_delay_hide_anim]" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("Time of disappearance:1000 = 1second (Enter to disable it: 00)",'notification-msg-interface-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("Time of disappearance:1000 = 1second (Enter to disable it: 0)",'notification-msg-interface-benaceur'); ?> </td></div></br>
 					</tr>
 <tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
 					<tr>
@@ -347,10 +346,10 @@ $options_f = get_option('msg_interface_benaceur_m_options');
 					<tr>
 						<td>
 							<div class="colwrap-display"><div class="msg_interface_benaceur_colwrap">
-								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if($options_f['mib_msg_interface_delay_show_anim']) echo $options_f['mib_msg_interface_delay_show_anim']; else echo "3000"; ?>" name="msg_interface_benaceur_m_options[mib_msg_interface_delay_show_anim]" />
+								<input type="text" style="text-align: center; padding-right: 0px; " class="msg_interface_benaceur_color_inp" value="<?php if(!empty($options_f['mib_msg_interface_delay_show_anim'])) echo $options_f['mib_msg_interface_delay_show_anim']; elseif ($options_f['mib_msg_interface_delay_show_anim'] == '') echo "3000"; else echo "0"; ?>" name="msg_interface_benaceur_m_options[mib_msg_interface_delay_show_anim]" />
 							</div></div>
 						</td>
-						<div class="colwrap-display"><td><?php _e("Time appearing:1000 = 1second (Enter to disable it: 00)",'notification-msg-interface-benaceur'); ?> </td></div></br>
+						<div class="colwrap-display"><td><?php _e("Time appearing:1000 = 1second (Enter to disable it: 0)",'notification-msg-interface-benaceur'); ?> </td></div></br>
 					</tr>
 <tr valign="top"><th scope="row" ><div class="to-tr2"></div></th></tr>
 					<tr>

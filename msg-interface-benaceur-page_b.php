@@ -105,8 +105,8 @@ add_filter('the_content','add_text_content_benaceur_style2_ap'); }
 }
 <?php } ?>
 .quick3-2 {
-	margin-top:<?php if (!empty($options_f['mib_msg_margin_top'])) echo $options_f['mib_msg_margin_top'] ; else  echo '10'; ?>px;
-	margin-bottom:<?php if (!empty($options_f['mib_msg_padding_top'])) echo $options_f['mib_msg_margin_bottom'] ; else  echo '10'; ?>px;
+	margin-top:<?php if(!empty($options_f['mib_msg_margin_top'])) echo $options_f['mib_msg_margin_top']; elseif ($options_f['mib_msg_margin_top'] == '') echo "10"; else echo "0"; ?>px;
+	margin-bottom:<?php if(!empty($options_f['mib_msg_margin_bottom'])) echo $options_f['mib_msg_margin_bottom']; elseif ($options_f['mib_msg_margin_bottom'] == '') echo "10"; else echo "0"; ?>px;
 }
 .quick3-2-2 {
 	margin-top:0px;
@@ -119,8 +119,8 @@ add_filter('the_content','add_text_content_benaceur_style2_ap'); }
 	color:<?php if (!empty($options_f['mib_msg_txt_color'])) echo $options_f['mib_msg_txt_color'] ; else  echo '#000000'; ?>; 
 	text-align:<?php if (!empty($options_f['mib_msg_text_align'])) echo $options_f['mib_msg_text_align'] ; else  echo 'center'; ?>;
 	font-weight:<?php echo $options_f['mib_msg_font_weight'] ;?>;
-	padding-top:<?php if (!empty($options_f['mib_msg_padding_top'])) echo $options_f['mib_msg_padding_top'] ; else  echo '8'; ?>px;
-	padding-bottom:<?php if (!empty($options_f['mib_msg_padding_bottom'])) echo $options_f['mib_msg_padding_bottom'] ; else  echo '8'; ?>px;
+	padding-top:<?php if(!empty($options_f['mib_msg_padding_top'])) echo $options_f['mib_msg_padding_top']; elseif ($options_f['mib_msg_padding_top'] == '') echo "8"; else echo "0"; ?>px;
+	padding-bottom:<?php if(!empty($options_f['mib_msg_padding_bottom'])) echo $options_f['mib_msg_padding_bottom']; elseif ($options_f['mib_msg_padding_bottom'] == '') echo "8"; else echo "0"; ?>px;
 	padding-right:6px;
 	padding-left:6px;
 	line-height:<?php if (!empty($options_f['mib_msg_line_height'])) echo $options_f['mib_msg_line_height'] ; else  echo '1.5'; ?>;
@@ -129,13 +129,13 @@ add_filter('the_content','add_text_content_benaceur_style2_ap'); }
 	<?php } ?>
 	min-width:<?php echo $options_f['mib_msg_min_width'] ;?>px;
 	height:<?php if (!empty($options_f['mib_msg_height'])) echo $options_f['mib_msg_height'] ; else  echo 'auto'; ?>px;
-	border-top:<?php if (!empty($options_f['mib_msg_border_top'])) echo $options_f['mib_msg_border_top'] ; else  echo '1'; ?>px solid <?php if (!empty($options_f['mib_msg_border_color'])) echo $options_f['mib_msg_border_color'] ; else  echo '#920f1b'; ?>;
-	border-bottom:<?php if (!empty($options_f['mib_msg_border_bottom'])) echo $options_f['mib_msg_border_bottom'] ; else  echo '1'; ?>px solid <?php if (!empty($options_f['mib_msg_border_color'])) echo $options_f['mib_msg_border_color'] ; else  echo '#920f1b'; ?>;
-	border-right:<?php if (!empty($options_f['mib_msg_border_right'])) echo $options_f['mib_msg_border_right'] ; else  echo '1'; ?>px solid <?php if (!empty($options_f['mib_msg_border_color'])) echo $options_f['mib_msg_border_color'] ; else  echo '#920f1b'; ?>;
-	border-left:<?php if (!empty($options_f['mib_msg_border_left'])) echo $options_f['mib_msg_border_left'] ; else  echo '1'; ?>px solid <?php if (!empty($options_f['mib_msg_border_color'])) echo $options_f['mib_msg_border_color'] ; else  echo '#920f1b'; ?>;
-	border-radius:<?php if (!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius'] ; else  echo '4'; ?>px;
-	-moz-border-radius:<?php if (!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius'] ; else  echo '4'; ?>px;
-	-webkit-border-radius:<?php if (!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius'] ; else  echo '4'; ?>px;
+	border-top:<?php if(!empty($options_f['mib_msg_border_top'])) echo $options_f['mib_msg_border_top']; elseif ($options_f['mib_msg_border_top'] == '') echo "1"; else echo "0"; ?>px solid <?php if (!empty($options_f['mib_msg_border_color'])) echo $options_f['mib_msg_border_color'] ; else  echo '#920f1b'; ?>;
+	border-bottom:<?php if(!empty($options_f['mib_msg_border_bottom'])) echo $options_f['mib_msg_border_bottom']; elseif ($options_f['mib_msg_border_bottom'] == '') echo "1"; else echo "0"; ?>px solid <?php if (!empty($options_f['mib_msg_border_color'])) echo $options_f['mib_msg_border_color'] ; else  echo '#920f1b'; ?>;
+	border-right:<?php if(!empty($options_f['mib_msg_border_right'])) echo $options_f['mib_msg_border_right']; elseif ($options_f['mib_msg_border_right'] == '') echo "1"; else echo "0"; ?>px solid <?php if (!empty($options_f['mib_msg_border_color'])) echo $options_f['mib_msg_border_color'] ; else  echo '#920f1b'; ?>;
+	border-left:<?php if(!empty($options_f['mib_msg_border_left'])) echo $options_f['mib_msg_border_left']; elseif ($options_f['mib_msg_border_left'] == '') echo "1"; else echo "0"; ?>px solid <?php if (!empty($options_f['mib_msg_border_color'])) echo $options_f['mib_msg_border_color'] ; else  echo '#920f1b'; ?>;
+	border-radius:<?php if(!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius']; elseif ($options_f['mib_msg_border_radius'] == '') echo "4"; else echo "0"; ?>px;
+	-moz-border-radius:<?php if(!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius']; elseif ($options_f['mib_msg_border_radius'] == '') echo "4"; else echo "0"; ?>px;
+	-webkit-border-radius:<?php if(!empty($options_f['mib_msg_border_radius'])) echo $options_f['mib_msg_border_radius']; elseif ($options_f['mib_msg_border_radius'] == '') echo "4"; else echo "0"; ?>px;
 	opacity:<?php if (!empty($options_f['mib_msg_opacity'])) echo $options_f['mib_msg_opacity'] ; else  echo '1'; ?>;
 	text-shadow:<?php echo $options_f['mib_msg_text_shadow']; ?> <?php if (!empty($options_f['mib_msg_text_shadow_color'])) echo $options_f['mib_msg_text_shadow_color'] ; else  echo '#000000'; ?>;
 }
