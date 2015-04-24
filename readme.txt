@@ -15,7 +15,7 @@ or the top or bottom of the article or to where you want. with the ability to ch
 and also the ability to display the message to the particular group or a particular member or visitors. 
 with multiple styles.you can also choose a specific time to appear or disappear.
 
-TRANSLATED IN FOLLOWING LANGUAGES:
+TRANSLATED IN FOLLOWING LANGUAGES :
 - Arabic
 - English
 
