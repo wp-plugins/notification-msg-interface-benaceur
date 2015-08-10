@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Notification msg interface benaceur v2.2.1\n"
+"Project-Id-Version: Notification msg interface benaceur v2.2.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-03-19 16:50:33+0000\n"
+"PO-Revision-Date: 2015-08-10 14:32:59+0000\n"
 "Last-Translator: BENACEUR <mohamedcompte@hotmail.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -55,11 +55,11 @@ msgstr "افصل بين المعرفات بفاصلة (,) على سبيل الم
 msgid "Note: After activating the plugin Put the following line in the place where you want the message to appear:"
 msgstr "ملاحظة: بعد تفعيل الإضافة ضع السطر التالي في المكان الذي تريد أن تظهر فيه الرسالة:"
 
-#: msg-interface-benaceur.php:197
-#: msg-interface-benaceur.php:229
+#: msg-interface-benaceur.php:199
 #: msg-interface-benaceur.php:231
-#: msg-interface-benaceur.php:235
+#: msg-interface-benaceur.php:233
 #: msg-interface-benaceur.php:237
+#: msg-interface-benaceur.php:239
 #@ n-message-Ben
 #@ default
 msgid "N-message-Ben"
@@ -160,7 +160,7 @@ msgstr "مستوى الشفافية 1-0.1"
 #: temp/msg-interface-benaceur-settings-page.php:194
 #@ notification-msg-interface-benaceur
 msgid "border color"
-msgstr ""
+msgstr "لون الإطار"
 
 #: temp/msg-interface-benaceur-settings-page.php:218
 #@ notification-msg-interface-benaceur
@@ -175,22 +175,22 @@ msgstr "المسافة ما بين السطور"
 #: temp/msg-interface-benaceur-settings-page.php:234
 #@ notification-msg-interface-benaceur
 msgid "margin-top"
-msgstr ""
+msgstr " المسافة العليا من الخارج "
 
 #: temp/msg-interface-benaceur-settings-page.php:242
 #@ notification-msg-interface-benaceur
 msgid "margin-bottom"
-msgstr ""
+msgstr " المسافة السفلى من الخارج "
 
 #: temp/msg-interface-benaceur-settings-page.php:250
 #@ notification-msg-interface-benaceur
 msgid "padding-top"
-msgstr ""
+msgstr " المسافة العليا من الداخل"
 
 #: temp/msg-interface-benaceur-settings-page.php:258
 #@ notification-msg-interface-benaceur
 msgid "padding-bottom"
-msgstr ""
+msgstr " المسافة السفلى من الداخل"
 
 #: temp/msg-interface-benaceur-settings-page.php:266
 #@ notification-msg-interface-benaceur
@@ -295,7 +295,7 @@ msgstr "لكن بالنسبة للنص الذي يظهر أعلى المقالة
 #: temp/msg-interface-benaceur-settings-page.php:202
 #@ notification-msg-interface-benaceur
 msgid "border radius"
-msgstr ""
+msgstr "زوايا الإطار"
 
 #: temp/msg-interface-benaceur-settings-page.php:439
 #@ notification-msg-interface-benaceur
@@ -345,22 +345,22 @@ msgstr "تفعيل  N-message-Ben في شريط الإدارة (admin bar) في 
 #: temp/msg-interface-benaceur-settings-page.php:161
 #@ notification-msg-interface-benaceur
 msgid "border top"
-msgstr ""
+msgstr "الإطار العلوي"
 
 #: temp/msg-interface-benaceur-settings-page.php:169
 #@ notification-msg-interface-benaceur
 msgid "border bottom"
-msgstr ""
+msgstr "الإطار السفلي"
 
 #: temp/msg-interface-benaceur-settings-page.php:177
 #@ notification-msg-interface-benaceur
 msgid "border right"
-msgstr ""
+msgstr "الإطار الأيمن"
 
 #: temp/msg-interface-benaceur-settings-page.php:185
 #@ notification-msg-interface-benaceur
 msgid "border left"
-msgstr ""
+msgstr "الإطار الأيسر"
 
 #: temp/msg-interface-benaceur-settings-page.php:388
 #@ notification-msg-interface-benaceur
@@ -397,11 +397,6 @@ msgstr ""
 msgid "Hide"
 msgstr "إخفاء"
 
-#: temp/notices-mib.php:18
-#@ notification-msg-interface-benaceur
-msgid "After this update Click on F5 to purge the browser cache ( For those who have installed the previous version(s) only )"
-msgstr "بعد هذا التحديث اضغط على F5 لتفريغ كاش المتصفح ( بالنسبة للذين قاموا بتنصيب الإصدار أو الإصدارات السابقة فقط )"
-
 #: temp/msg-interface-benaceur-settings-page.php:32
 #@ notification-msg-interface-benaceur
 msgid "Menu"
@@ -421,4 +416,31 @@ msgstr "وقت الاختفاء:1000=1ثانية (لتعطيله أدخل 0) "
 #@ notification-msg-interface-benaceur
 msgid "Time appearing:1000 = 1second (Enter to disable it: 0)"
 msgstr "وقت الظهور:1000=1ثانية (لتعطيله أدخل 0)"
+
+#: temp/msg-interface-benaceur-settings-page.php:454
+#@ notification-msg-interface-benaceur
+msgid "Remove all settings and data of the plugin from database when the plugin is disabled"
+msgstr "حذف جميع إعدادات وبيانات الإضافة من قاعدة البيانات عند تعطيلها"
+
+#: temp/msg-interface-benaceur-settings-page.php:461
+#@ notification-msg-interface-benaceur
+msgid "Do not delete"
+msgstr "لا تحذف"
+
+#: temp/msg-interface-benaceur-settings-page.php:474
+#: temp/msg-interface-benaceur-settings-page.php:499
+#@ notification-msg-interface-benaceur
+msgid "My plugins"
+msgstr "إضافاتي My plugins"
+
+#: temp/msg-interface-benaceur-settings-page.php:498
+#: temp/msg-interface-benaceur-settings-page.php:502
+#@ notification-msg-interface-benaceur
+msgid "Hide this list"
+msgstr "إخفاء القائمة"
+
+#: temp/notices-mib.php:18
+#@ notification-msg-interface-benaceur
+msgid "After this update Click Ctrl+F5 to purge the cache of this page ( For those who have installed the previous version(s) only )"
+msgstr "بعد هذا التحديث اضغط على F5+Ctrl لتفريغ كاش هذه الصفحة ( بالنسبة للذين قاموا بتنصيب الإصدار أو الإصدارات السابقة فقط )"
 

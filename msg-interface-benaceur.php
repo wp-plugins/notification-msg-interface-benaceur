@@ -3,7 +3,7 @@
 Plugin Name: Notification msg interface benaceur
 Plugin URI: http://benaceur-php.com/1714.aspx
 Description: A message appears below the header or the designated location
-Version: 2.2.2
+Version: 2.2.3
 Author: benaceur
 Author URI: http://benaceur-php.com/
 License: GPL2
@@ -82,6 +82,8 @@ class Site_msg_interface_benaceur {
 		register_setting( 'msg-interface-benaceur-settings-group', 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_front' );
 		register_setting( 'msg-interface-benaceur-settings-group', 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin' );
 		register_setting( 'msg-interface-benaceur-settings-group', 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin_menu' );
+		
+		register_setting( 'msg-interface-benaceur-group-delete-all-options', 'msg_interface_benaceur-delete-all-options' );
 	}
 
 	/**
@@ -240,17 +242,45 @@ $wp_admin_bar->add_menu( array( 'parent' => 'site-name', 'id' => 'PLB4', 'title'
 }
 // admin_bar
 
-// ADMIN NOTICES
     add_action( 'admin_init', 'mib_admin_notices' );
     function mib_admin_notices() {
 	if ( function_exists( 'get_plugin_data' ) ) {
     $plugin_data_mib = get_plugin_data( __FILE__ );
 
-    if ( $plugin_data_mib['Version'] == '2.1.9' && $_GET['page'] == 'N-message-Ben' ) {
+    if ( $plugin_data_mib['Version'] == '2.2.3' && $_GET['page'] == 'N-message-Ben' ) {
     include ('temp/notices-mib.php');
     }
 	}
 	}
-// ADMIN NOTICES
 	
-require ('msg-interface-benaceur-func-style.php');
+  if ( get_option( 'msg_interface_benaceur-delete-all-options') == 'delete_opt_mib') :
+  register_deactivation_hook( __FILE__, 'msg_interface_benaceur_plugin_deactivation' );
+  function msg_interface_benaceur_plugin_deactivation() {
+
+    delete_option( 'msg_interface_benaceur_enable' );
+    delete_option( 'msg_interface_benaceur_for_all' );
+    delete_option( 'msg_interface_benaceur_for_visitors' );
+    delete_option( 'msg_interface_benaceur_for_users' );
+    delete_option( 'msg_interface_benaceur_for_role' );
+    delete_option( 'msg_interface_benaceur_for_list_ids' );
+    delete_option( 'msg_interface_benaceur_text' );
+    delete_option( 'msg_interface_benaceur_text2' );
+    delete_option( 'msg_interface_benaceur_frontend' );
+    delete_option( 'msg_interface_benaceur_for_list_ids_posts' );
+    delete_option( 'mib_msg_interface_in_posts_ids' );
+    delete_option( 'msg_interface_benaceur_top_content' );
+    delete_option( 'msg_interface_benaceur_bottom_content' );
+    delete_option( 'msg_interface_benaceur_disable_msg_head' );
+    delete_option( 'msg_interface_benaceur_align_msg' );
+    delete_option( 'msg_interface_benaceur_align_msg_content_top' );
+    delete_option( 'msg_interface_benaceur_align_msg_content_bottom' );
+    delete_option( 'msg_interface_benaceur_administrator' );
+    delete_option( 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_front' );
+    delete_option( 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin' );
+    delete_option( 'msg_interface_benaceur_enable_nmb_on_admin_bar_in_admin_menu' );
+    delete_option( 'msg_interface_benaceur-delete-all-options' );
+    delete_option('msg_interface_benaceur_m_options');
+}
+  endif; // endif msg_interface_benaceur-delete-all-options
+
+  require ('msg-interface-benaceur-func-style.php');
